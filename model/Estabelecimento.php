@@ -89,13 +89,13 @@
         return $estabelecimento->resgataEstabelecimento($idEstabelecimento);  
     }
 
-    public function alterarCliente(Estabelecimento $estabelecimento){
+    public function alterarEstabelecimento(Estabelecimento $estabelecimento){
         include_once '../dao/EstabelecimentoDao.php';
         $estabelecimento = new EstabelecimentoDao();
         $estabelecimento->alterarEstabelecimento($this);  
     }
 
-    public function excluirCliente($idEstabelecimento){
+    public function excluirEstabelecimento($idEstabelecimento){
         include_once '../dao/EstabelecimentoDao.php';
         $estabelecimento = new EstabelecimentoDao();
         $estabelecimento->excluirEstabelecimento($idEstabelecimento);  

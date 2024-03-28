@@ -2,6 +2,7 @@
 
     class Reserva {
 
+            
         private $idReserva;
         private $FK_idCliente;
         private $FK_idEstabelecimento;
@@ -98,5 +99,47 @@
     public function setObs($obs) {
         $this->obs = $obs;
     }
-}
+
+       // Métodos 
+    public function cadastrarReserva(Reserva $model){
+        include_once '../dao/ReservaDao.php';
+        $model = new ReservaDao();
+        $model->cadastrarReserva($this);    
+    }
+
+    public function listarReserva() {
+        include_once '../dao/ReservaDao.php';
+        $model = new ReservaDao();
+        $model->listarReserva();
+        return $model->listarReserva();  
+    }
+
+    public function resgataReserva($idReserva) {
+        include_once '../dao/ReservaDao.php';
+        $model = new ReservaDao();
+        return $model->resgataReserva($idReserva);  
+    }
+
+    public function alterarReserva(Reserva $model){
+        include_once '../dao/ReservaDao.php';
+        $model = new ReservaDao();
+        $model->alterarReserva($this);  
+    }
+
+    public function excluirReserva($idReserva){
+        include_once '../dao/ReservaDao.php';
+        $reserva = new ReservaDao();
+        $reserva->excluirReserva($idEstabelecimento);  
+    }
+    }
+
+
+
+
+
+
+
+
+
+
 ?>

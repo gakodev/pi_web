@@ -23,15 +23,15 @@
         }
 
         public static function alterarEstabelecimento ($idEstabelecimento, $categoria, $nomeFantasia, $cnpj, $contato, $endereco){
-            include_once '../model/Cliente.php';
-            $model = new Cliente ($idEstabelecimento, $categoria, $nomeFantasia, $cnpj, $contato, $endereco);
+            include_once '../model/EstabelecimentoDao.php';
+            $model = new Estabelecimento ($idEstabelecimento, $categoria, $nomeFantasia, $cnpj, $contato, $endereco);
             $model->alterarEstabelecimento($model);
         }
 
         public static function excluirEstabelecimento ($idEstabelecimento) {
             include_once '../model/EstabelecimentoDao.php';
-            $model = new Cliente (null, null, null, null, null, null);
-            $model -> excluirEstabelecimento($idEstabelecimento);
+            $model = new Estabelecimento (null, null, null, null, null, null);
+            $model->excluirEstabelecimento($idEstabelecimento);
 
         }
 
