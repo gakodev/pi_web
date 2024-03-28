@@ -68,6 +68,43 @@
     public function setEmail($email) {
         $this->email = $email;
     }
+
+    // Métodos 
+    public function cadastrarCliente(Cliente $model){
+        include_once '../dao/clienteDao.php';
+        $model = new clienteDao();
+        $model->cadastrarCliente($this);    
+    }
+
+    public function listarClientes() {
+        include_once '../dao/clienteDao.php';
+        $dao = new clienteDao();
+        $dao->listarClientes();
+        return $dao->listarClientes();  
+    }
+
+    public function resgataCliente($idCliente) {
+        include_once '../dao/clienteDao.php';
+        $model = new clienteDao();
+        return $model->resgataCliente($idCliente);  
+    }
+
+    public function alterarCliente(Cliente $cliente){
+        include_once '../dao/clienteDao.php';
+        $cliente = new clienteDao();
+        $cliente->alterarCliente($this);  
+    }
+
+    public function excluirCliente($idCliente){
+        include_once '../dao/clienteDao.php';
+        $model = new clienteDao();
+        $model->excluirCliente($idCliente);  
+    }
+
+
+
+
+
 }
 
 
