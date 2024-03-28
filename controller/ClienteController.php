@@ -2,9 +2,9 @@
 
     class ClienteController {
 
-        public static function cadastrarCliente ($nome, $cpf, $dataNascimento, $numCelular, $email) {
+        public static function cadastrarCliente ($nome, $cpf, $datareservaNascimento, $numCelular, $email) {
             include_once "../model/Cliente.php";
-            $model = new Cliente (null, $nome, $cpf, $dataNascimento, $numCelular, $email);
+            $model = new Cliente (null, $nome, $cpf, $datareservaNascimento, $numCelular, $email);
             $model->cadastrarCliente($model);
         }
 
@@ -21,9 +21,9 @@
 
         }
 
-        public static function alterarCliente ($idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email){
+        public static function alterarCliente ($idCliente, $nome, $cpf, $datareservaNascimento, $numCelular, $email){
             include_once '../model/Cliente.php';
-            $model = new Cliente ($idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email);
+            $model = new Cliente ($idCliente, $nome, $cpf, $datareservaNascimento, $numCelular, $email);
             $model->alterarCliente($model);
         }
 

@@ -7,19 +7,19 @@
         private $FK_idCliente;
         private $FK_idEstabelecimento;
         private $numConvidados;
-        private $data;
+        private $dataReserva;
         private $hora;
         private $ambiente;
         private $ocasiao;
         private $obs;
         
     // Construtor
-    public function __construct($idReserva, $FK_idCliente, $FK_idEstabelecimento, $numConvidados, $data, $hora, $ambiente, $ocasiao, $obs) {
+    public function __construct($idReserva, $FK_idCliente, $FK_idEstabelecimento, $numConvidados, $dataReserva, $hora, $ambiente, $ocasiao, $obs) {
     $this->idReserva = $idReserva;
     $this->FK_idCliente = $FK_idCliente;
     $this->FK_idEstabelecimento = $FK_idEstabelecimento;
     $this->numConvidados = $numConvidados;
-    $this->data = $data;
+    $this->datareserva = $dataReserva;
     $this->hora = $hora;
     $this->ambiente = $ambiente;
     $this->ocasiao = $ocasiao;
@@ -43,8 +43,8 @@
         return $this->numConvidados;
     }
 
-    public function getData() {
-        return $this->data;
+    public function getDataReserva() {
+        return $this->dataReserva;
     }
 
     public function getHora() {
@@ -80,8 +80,8 @@
         $this->numConvidados = $numConvidados;
     }
 
-    public function setData($data) {
-        $this->data = $data;
+    public function setDataReserva($dataReserva) {
+        $this->datareserva = $dataReserva;
     }
 
     public function setHora($hora) {

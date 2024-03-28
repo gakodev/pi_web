@@ -5,16 +5,16 @@
         private $idCliente;
         private $nome;
         private $cpf;
-        private $dataNascimento;
+        private $datareservaNascimento;
         private $numCelular;
         private $email;
     
     // Construtor
-    public function __construct($idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email) {
+    public function __construct($idCliente, $nome, $cpf, $datareservaNascimento, $numCelular, $email) {
         $this->idCliente = $idCliente;
         $this->nome = $nome;
         $this->cpf = $cpf;
-        $this->dataNascimento = $dataNascimento;
+        $this->datareservaNascimento = $datareservaNascimento;
         $this->numCelular = $numCelular;
         $this->email = $email;
     }
@@ -32,8 +32,8 @@
         return $this->cpf;
     }
 
-    public function getDataNascimento() {
-        return $this->dataNascimento;
+    public function getDataReservaNascimento() {
+        return $this->datareservaNascimento;
     }
 
     public function getNumCelular() {
@@ -57,8 +57,8 @@
         $this->cpf = $cpf;
     }
 
-    public function setDataNascimento($dataNascimento) {
-        $this->dataNascimento = $dataNascimento;
+    public function setDataReservaNascimento($datareservaNascimento) {
+        $this->datareservaNascimento = $datareservaNascimento;
     }
 
     public function setNumCelular($numCelular) {

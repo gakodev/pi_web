@@ -6,15 +6,15 @@
 
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO reserva (FK_idCliente, FK_estabelicimento, numConvidados, data, hora, ambiente, ocasiao, obs)
-            VALUES (:FK_idCliente, :FK_estabelicimento, :numConvidados, :data, :hora, :ambiente, :ocasiao, :obs)";
+        $sql = "INSERT INTO reserva (FK_idCliente, FK_estabelicimento, numConvidados, dataReserva, hora, ambiente, ocasiao, obs)
+            VALUES (:FK_idCliente, :FK_estabelicimento, :numConvidados, :dataReserva, :hora, :ambiente, :ocasiao, :obs)";
             
         $stmt = $conex->conn->prepare($sql);
 
         $stmt->bindValue(':FK_idCliente', $reserva->getFKIdCliente());
         $stmt->bindValue(':FK_estabelicimento', $reserva->getFKIdEstabelecimento());
         $stmt->bindValue(':numConvidados', $reserva->getNumConvidados() );
-        $stmt->bindValue(':data', $reserva->getData());
+        $stmt->bindValue(':dataReserva', $reserva->getDataReserva());
         $stmt->bindValue(':hora', $reserva->getHora());
         $stmt->bindValue(':ambiente', $reserva->getAmbiente());
         $stmt->bindValue(':ocasiao', $reserva->getOcasiao());
@@ -54,7 +54,7 @@
 
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "UPDATE reserva SET FK_idCliente, FK_estabelicimento, numConvidados, data, hora, ambiente, ocasiao, obs
+        $sql = "UPDATE reserva SET FK_idCliente, FK_estabelicimento, numConvidados, dataReserva, hora, ambiente, ocasiao, obs
             WHERE id = :idReserva";
 
             $stmt = $conex->conn->prepare($sql);
@@ -63,7 +63,7 @@
         $stmt->bindValue(':FK_idCliente', $reserva->getFKIdCliente());
         $stmt->bindValue(':FK_estabelicimento', $reserva->getFKIdEstabelecimento());
         $stmt->bindValue(':numConvidados', $reserva->getNumConvidados() );
-        $stmt->bindValue(':data', $reserva->getData());
+        $stmt->bindValue(':dataReserva', $reserva->getDataReserva());
         $stmt->bindValue(':hora', $reserva->getHora());
         $stmt->bindValue(':ambiente', $reserva->getAmbiente());
         $stmt->bindValue(':ocasiao', $reserva->getOcasiao());
