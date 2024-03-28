@@ -68,5 +68,42 @@
     public function setEndereco($endereco) {
         $this->endereco = $endereco;
     }
+
+    // Métodos 
+    public function cadastrarEstabelecimento(Estabelecimento $estabelecimento){
+        include_once '../dao/EstabelecimentoDao.php';
+        $estabelecimento = new EstabelecimentoDao();
+        $estabelecimento->cadastrarEstabelecimento($this);    
+    }
+
+    public function listarEstabelecimento() {
+        include_once '../dao/EstabelecimentoDao.php';
+        $estabelecimento = new EstabelecimentoDao();
+        $estabelecimento->listarEstabelecimento();
+        return $estabelecimento->listarEstabelecimento();  
+    }
+
+    public function resgataEstabelecimento($idEstabelecimento) {
+        include_once '../dao/EstabelecimentoDao.php';
+        $estabelecimento = new EstabelecimentoDao();
+        return $estabelecimento->resgataEstabelecimento($idEstabelecimento);  
+    }
+
+    public function alterarCliente(Estabelecimento $estabelecimento){
+        include_once '../dao/EstabelecimentoDao.php';
+        $estabelecimento = new EstabelecimentoDao();
+        $estabelecimento->alterarEstabelecimento($this);  
+    }
+
+    public function excluirCliente($idEstabelecimento){
+        include_once '../dao/EstabelecimentoDao.php';
+        $estabelecimento = new EstabelecimentoDao();
+        $estabelecimento->excluirEstabelecimento($idEstabelecimento);  
+    }
+
+
+
+
+
 }
 ?>

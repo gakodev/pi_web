@@ -70,35 +70,35 @@
     }
 
     // Métodos 
-    public function cadastrarCliente(Cliente $model){
-        include_once '../dao/clienteDao.php';
-        $model = new clienteDao();
-        $model->cadastrarCliente($this);    
+    public function cadastrarCliente(Cliente $dao){
+        include_once '../dao/ClienteDao.php';
+        $dao = new ClienteDao();
+        $dao->cadastrarCliente($this);    
     }
 
     public function listarClientes() {
-        include_once '../dao/clienteDao.php';
-        $dao = new clienteDao();
+        include_once '../dao/ClienteDao.php';
+        $dao = new ClienteDao();
         $dao->listarClientes();
         return $dao->listarClientes();  
     }
 
     public function resgataCliente($idCliente) {
-        include_once '../dao/clienteDao.php';
-        $model = new clienteDao();
-        return $model->resgataCliente($idCliente);  
+        include_once '../dao/ClienteDao.php';
+        $dao = new ClienteDao();
+        return $dao->resgataCliente($idCliente);  
     }
 
-    public function alterarCliente(Cliente $cliente){
-        include_once '../dao/clienteDao.php';
-        $cliente = new clienteDao();
-        $cliente->alterarCliente($this);  
+    public function alterarCliente(Cliente $dao){
+        include_once '../dao/ClienteDao.php';
+        $dao = new ClienteDao();
+        $dao->alterarCliente($this);  
     }
 
     public function excluirCliente($idCliente){
-        include_once '../dao/clienteDao.php';
-        $model = new clienteDao();
-        $model->excluirCliente($idCliente);  
+        include_once '../dao/ClienteDao.php';
+        $dao = new ClienteDao();
+        $dao->excluirCliente($idCliente);  
     }
 
 

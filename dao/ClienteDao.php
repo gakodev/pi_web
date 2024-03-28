@@ -71,15 +71,26 @@
         echo '<script>alert("Erro!")</script>';
     }
     echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
+    // ALTERAR ESSA LINHA !!!
     }
 
+    public function excluirCliente($idCliente){
+        include_once 'conexao.php';
 
+        $conex = new Conexao();
+        $conex->fazConexao();
+        $sql = "DELETE FROM cliente WHERE id = '$idCliente'";
 
+        $res = $conex->conn->query($sql);
 
-
-
-
-
+            if ($res) {
+                echo '<script>alert("Exclusão concluída!")</script>';
+            } else {
+                echo '<script>alert("Erro!")</script>';
+            }
+            echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
+            // ALTERAR ESSA LINHA !!!
+            }
 
     }
 
