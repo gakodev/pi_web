@@ -20,13 +20,13 @@
 
         }
 
-        public static function alterarCliente ($idReserva, $FK_idCliente, $FK_estabelicimento, $numConvidados, $dataReserva, $hora, $ambiente, $ocasiao, $obs){
+        public static function alterarReserva ($idReserva, $FK_idCliente, $FK_estabelicimento, $numConvidados, $dataReserva, $hora, $ambiente, $ocasiao, $obs){
             include_once '../model/ReservaDao.php';
             $model = new Reserva ($idReserva, $FK_idCliente, $FK_estabelicimento, $numConvidados, $dataReserva, $hora, $ambiente, $ocasiao, $obs);
             $model->alterarReserva($model);
         }
 
-        public static function excluirCliente ($idReserva) {
+        public static function excluirReserva ($idReserva) {
             include_once '../model/ReservaDao.php';
             $model = new Reserva (null, null, null, null, null, null, null, null, null);
             $model -> excluirReserva($idReserva);
