@@ -1,0 +1,6 @@
+.entrada:hover{
+    transform: rotate(900deg);
+
+    transition: 1s;
+
+}

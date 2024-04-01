@@ -31,7 +31,7 @@ switch ($_REQUEST["op"]){
         echo "Não encontrou a chave";
 
     // funções do cliente;
-
+    }
 function cadastrarCliente (){
     $nome = $_POST["nome"];
     $cpf = $_POST["cpf"];
@@ -148,5 +148,5 @@ function listarReserva () {
 
 
 
-}
+
 ?>
