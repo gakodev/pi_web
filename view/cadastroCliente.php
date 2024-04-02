@@ -21,14 +21,30 @@
 
 <?php
 
-$id = '';
-$nome = '';
-$cpf = '';
-$dataNascimento = '';
-$numCelular = '';
-$email = '';
-$operacao = 'alterarCliente';
-
+$operacao = $_REQUEST["op"];
+    if($operacao=="alterarCliente") {
+        include "../controller/ClienteController.php";
+        $res = ClienteController::resgataCliente($_REQUEST["idCliente"]);
+        $qtd = $res->rowCount();
+        $row = $res->fetch(PDO::FETCH_OBJ);
+        $idCliente = $row->idCliente;
+        $nome = $row->nome;
+        $cpf = $row->cpf;
+        $cnpj = $row->cnpj;
+        $dataNascimento = $row->dataNascimento;
+        $numCelular = $row->numCelular;
+        $email = $row->email;
+        $operacao = "alterarCliente";
+    }   else {
+        $idCliente = "";
+        $nome = "";
+        $cpf = "";
+        $dataNascimento = "";
+        $numCelular = "";
+        $email = "";
+        $operacao = "cadastrarCliente";
+    }
+    // $idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email
 print "<div id='form_cliente'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='nome'>nome:</label>";
@@ -41,7 +57,7 @@ print "<label for='numCelular'>NÚMERO DE CONTATO:</label>";
 print "<input class='entrada' type='number' name='numCelular' value=".$numCelular."><br>";
 print "<label for='email'>E-MAIL:</label>";
 print "<input class='entrada' type='text' name='email' value=".$email."><br>";
-print "<input class='entrada' type='hidden' name='id' value='$id'><br>";
+print "<input class='entrada' type='hidden' name='id' value='$idCliente'><br>";
 print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
 print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
 print "</form>";
