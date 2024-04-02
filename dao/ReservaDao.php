@@ -6,13 +6,13 @@
 
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO reserva (FK_idCliente, FK_estabelicimento, numConvidados, dataReserva, hora, ambiente, ocasiao, obs)
-            VALUES (:FK_idCliente, :FK_estabelicimento, :numConvidados, :dataReserva, :hora, :ambiente, :ocasiao, :obs)";
+        $sql = "INSERT INTO reserva (FK_idCliente, FK_idEstabelecimento, numConvidados, dataReserva, hora, ambiente, ocasiao, obs)
+            VALUES (:FK_idCliente, :FK_idEstabelecimento, :numConvidados, :dataReserva, :hora, :ambiente, :ocasiao, :obs)";
             
         $stmt = $conex->conn->prepare($sql);
 
         $stmt->bindValue(':FK_idCliente', $reserva->getFKIdCliente());
-        $stmt->bindValue(':FK_estabelicimento', $reserva->getFKIdEstabelecimento());
+        $stmt->bindValue(':FK_idEstabelecimento', $reserva->getFKIdEstabelecimento());
         $stmt->bindValue(':numConvidados', $reserva->getNumConvidados() );
         $stmt->bindValue(':dataReserva', $reserva->getDataReserva());
         $stmt->bindValue(':hora', $reserva->getHora());
@@ -25,7 +25,7 @@
             if ($res) {
                 echo '<script>alert("Cadastro realizado!")</script>';
         } else {
-            echo '<script>alert("Erro!")</script>';
+            echo '<script>alert("Preencha todos os campos obrigatórios!")</script>';
         }
         echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
         // ALTERAR ESSA LINHA !!!
