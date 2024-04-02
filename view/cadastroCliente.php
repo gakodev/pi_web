@@ -19,6 +19,13 @@
     </div>
 </header>
 
+<div id= "imagens">
+    <img class= "classeImgs" src="imgs/restaurante.jpg" alt="">
+    <img class= "classeImgs" src="imgs/bar.jpg" alt="">
+    <img class= "classeImgs" src="imgs/drinkeria.jpg" alt="">
+</div>
+
+
 <?php
 
 $operacao = $_REQUEST["op"];
@@ -44,7 +51,7 @@ $operacao = $_REQUEST["op"];
         $email = "";
         $operacao = "cadastrarCliente";
     }
-    // $idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email
+    
 print "<div id='form_cliente'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='nome'>nome:</label>";

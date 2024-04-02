@@ -49,7 +49,7 @@ $operacao = $_REQUEST["op"];
         $obs = "";
         $operacao = "cadastrarReserva";
     }
-// $idReserva, $FK_idCliente, $FK_idEstabelecimento, $numConvidados, $dataReserva, $hora, $ambiente, $ocasiao, $obs
+
 print "<div id='form_cliente'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='FK_idCliente'>FK_idCliente:</label>";
