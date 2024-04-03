@@ -19,16 +19,52 @@
     </div>
 </header>
 
-<div id= "imagens">
-    <img class= "classeImgs" src="imgs/restaurante.jpg" alt="">
-    <img class= "classeImgs" src="imgs/bar.jpg" alt="">
-    <img class= "classeImgs" src="imgs/drinkeria.jpg" alt="">
+
+<div id='under_header'>
+    <h2>Seus lugares favoritos agora em uma plataforma só!</h2><br>
+    <p>Em dúvida onde ir em um dia de bobeira? Temos algumas ideias para você!</p>
+    <p>Do mais casual ao mais despojado, é só buscar. Vem !</p>
 </div>
+
+<ul class="gallery">
+	<li style="background: #f44336;"></li>
+	<li style="background: #744700;"></li>
+	<li style="background: #ce7e00;"></li>
+	<li style="background: #8fce00;"></li>
+	<li style="background: #2986cc;"></li>
+    <li style="background: #16537e;"></li>
+    <li style="background: #6a329f;"></li>
+    <li style="background: #c90076;"></li>
+    <li style="background: #b4a7d6;"></li>
+    <li style="background: #f28482;"></li>
+</ul>
+
+<script>
+const slider = document.querySelector('.gallery');
+const items = document.querySelectorAll('.gallery li');
+const itemWidth = items[0].offsetWidth + 16; // Considera-se a margem de 1rem definida no CSS
+let currentIndex = 0;
+
+// Função para mover o carrossel para o próximo item
+function moveCarousel() {
+    currentIndex = (currentIndex + 1) % items.length; // Próximo índice no círculo
+    const scrollLeft = currentIndex * itemWidth;
+    slider.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+    });
+    // Reativa a animação automática após a conclusão da transição atual
+    setTimeout(moveCarousel, 2000);
+}
+
+// Inicia a animação automática
+moveCarousel();
+</script>
+
 
 
 <?php
-
-$operacao = $_REQUEST["op"];
+/*$operacao = $_REQUEST["op"];
     if($operacao=="alterarCliente") {
         include "../controller/ClienteController.php";
         $res = ClienteController::resgataCliente($_REQUEST["idCliente"]);
@@ -69,8 +105,14 @@ print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
 print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
 print "</form>";
 print "</div>";
-
+*/
 ?>
+
+<div id="cards">
+    <p>tudo bom?</p>
+    
+
+</div>
 
 
 </body>
