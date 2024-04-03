@@ -42,21 +42,18 @@
 <script>
 const slider = document.querySelector('.gallery');
 const items = document.querySelectorAll('.gallery li');
-const itemWidth = items[0].offsetWidth + 16; // Considera-se a margem de 1rem definida no CSS
+const itemWidth = items[0].offsetWidth + 16; 
 let currentIndex = 0;
 
-// Função para mover o carrossel para o próximo item
 function moveCarousel() {
-    currentIndex = (currentIndex + 1) % items.length; // Próximo índice no círculo
+    currentIndex = (currentIndex + 1) % items.length; 
     const scrollLeft = currentIndex * itemWidth;
     slider.scrollTo({
         left: scrollLeft,
         behavior: 'smooth'
     });
-    // Reativa a animação automática após a conclusão da transição atual
     setTimeout(moveCarousel, 2000);
 }
-
 // Inicia a animação automática
 moveCarousel();
 </script>
