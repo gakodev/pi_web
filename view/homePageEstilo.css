@@ -2,106 +2,220 @@
 
     padding: 0;
     margin: 0;
-    }
-    
-    
-    header {
-    
-        background-color: orange;
-        position: sticky;
-        width: auto;
-        display: flex;
-        height: 90px;
-        justify-content: center;
-        
-    }
-    
-    #div_header {
-    
-        position: inherit;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin: 0 2rem;
-    
-    }
-    
-    #ul_header {
-    
-        display: flex;
-        text-decoration: none;
-        list-style: none;
-        position: center;
-    }
-    
-    #li {
-    
-        float: left;
-        text-decoration: none;
-        align-content: center;
-        
-    }
-    
-    li a {
-    
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: medium;
-    }
-    
-    li a:hover:not(.active){
-    
-        background-color: #ffffff46;
-        border-radius: 4vh;
-    }
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-    #under_header {
-
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 20px;
-        background-image: url("imgs/fundo.jpeg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-size: 100vw;
-        height: 40vh;
-
-    }
+body {
+   background-color: coral; 
+}
 
 
-    .gallery {
-        padding: 1rem;
-        display: grid;
-        grid-template-columns: repeat(10, 80vw);
-        grid-template-rows: 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
-        overflow: hidden;
-        height: 50vh;
-        scroll-snap-type: both mandatory;
-        scroll-padding: 1rem;
-        transition: transform 2s linear;;
-    }
 
-    .active {
-        scroll-snap-type: none;
-    }
-    
-    li {
-        scroll-snap-align: center;
-        display: inline-block;
-        border-radius: 3px;
-        font-size: 0;
-    }
-    
-    #cards {
-        height: 500px;
-        border: solid;
 
-    }
+header {
+
+    background-color: #FF6400;
+    position: sticky;
+    width: auto;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+
+}
+
+#div_header {
+
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 2rem;
+
+}
+
+#ul_header {
+
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    position: center;
+}
+
+#li {
+
+    float: left;
+    text-decoration: none;
+    align-content: center;
+
+}
+
+li a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+li a:hover:not(.active) {
+
+    background-color: #ffffff46;
+    border-radius: 4vh;
+}
+
+#under_header {
+
+    background-image: url("imgs/banner.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 100vw;
+    height: 50vh;
+
+}
+
+
+.gallery {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(10, 80vw);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: hidden;
+    height: 50vh;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    transition: transform 2s linear;
+    ;
+}
+
+.active {
+    scroll-snap-type: none;
+}
+
+li {
+    scroll-snap-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0;
+}
+
+#cards {
+    height: max-content;
+    border: solid;
+
+}
+
+/* css dos cards*/
+
+h5 {
+    margin: 0px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 12px;
+}
+
+.center {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+/* CLASSE DE DESIGN DO CARD  */
+
+.property-card {
+    height: 18em;
+    width: 18em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    /* sombra */
+    /*-webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
+}
+
+/* CLASSE DE DESIGN DA IMAGEM  */
+
+.property-image {
+    height: 6em;
+    width: 18em;
+    /*padding: 1em 2em;*/
+    position: Absolute;
+    top: 0px;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* CLASSE DE DESIGN DO  */
+
+.property-description {
+    background-color: #FAFAFC;
+    height: 12em;
+    width: 18em;
+    position: absolute;
+    bottom: 0em;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 0.5em 1em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description {
+    height: 0em;
+    padding: 0px 1em;
+}
+
+.property-card:hover .property-image {
+    height: 18em;
+    width: 54em;
+}
+
+.property-card:hover .property-social-icons {
+    background-color: white;
+}
+
+.property-card:hover .property-social-icons:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#img1 {
+    max-width: 100%;
+    height: auto;
+    background-image: url("imgs/fundo.jpeg");
+}
+
+#img2 {
+    max-width: 100%;
+    height: auto;
+    
+}

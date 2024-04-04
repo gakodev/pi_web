@@ -21,9 +21,7 @@
 
 
 <div id='under_header'>
-    <h2>Seus lugares favoritos agora em uma plataforma só!</h2><br>
-    <p>Em dúvida onde ir em um dia de bobeira? Temos algumas ideias para você!</p>
-    <p>Do mais casual ao mais despojado, é só buscar. Vem !</p>
+    
 </div>
 
 <ul class="gallery">
@@ -57,8 +55,6 @@ function moveCarousel() {
 // Inicia a animação automática
 moveCarousel();
 </script>
-
-
 
 <?php
 /*$operacao = $_REQUEST["op"];
@@ -106,7 +102,108 @@ print "</div>";
 ?>
 
 <div id="cards">
-    <p>tudo bom?</p>
+
+<div class="center">
+    
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div  id="img1">
+        <img  class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
+        <div class="property-image-title">
+        </div>
+      </div></div></a>
+    <div class="property-description">
+      <h5> Fuga Bar - Cais Embarcadero </h5>
+      <br>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div id="img2">
+        <img class="property-image" src="imgs/restaurante.jpg" alt="Fuga">
+        <div class="property-image-title">
+        </div>
+      </div></div></a>
+    <div class="property-description">
+      <h5> Severina </h5>
+      <br>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div class="property-image-title">
+          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+        </div>
+      </div></a>
+    <div class="property-description">
+      <h5> Card Title </h5>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div class="property-image-title">
+          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+        </div>
+      </div></a>
+    <div class="property-description">
+      <h5> Card Title </h5>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div class="property-image-title">
+          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+        </div>
+      </div></a>
+    <div class="property-description">
+      <h5> Card Title </h5>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+</div>  
+
+
+  
+ 
     
 
 </div>
