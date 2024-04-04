@@ -148,12 +148,14 @@ print "</div>";
   <div class="property-card">
     <a href="#">
       <div class="property-image">
+        <div id="img3">
+        <img class="property-image" src="imgs/wills.jpg" alt="Fuga">
         <div class="property-image-title">
-          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
         </div>
-      </div></a>
+      </div></div></a>
     <div class="property-description">
-      <h5> Card Title </h5>
+      <h5> Wills Bar </h5>
+      <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
     <a href="#">
@@ -162,6 +164,7 @@ print "</div>";
       </div>
     </a>
   </div>
+
 
   <div class="property-card">
     <a href="#">

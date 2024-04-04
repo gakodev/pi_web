@@ -136,7 +136,7 @@ p {
 /* CLASSE DE DESIGN DO CARD  */
 
 .property-card {
-    height: 18em;
+    height: 20em;
     width: 18em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -159,7 +159,7 @@ p {
 /* CLASSE DE DESIGN DA IMAGEM  */
 
 .property-image {
-    height: 6em;
+    height: 8em;
     width: 18em;
     /*padding: 1em 2em;*/
     position: Absolute;
@@ -211,11 +211,14 @@ p {
 #img1 {
     max-width: 100%;
     height: auto;
-    background-image: url("imgs/fundo.jpeg");
 }
 
 #img2 {
     max-width: 100%;
     height: auto;
-    
+}
+
+#img3 {
+    max-width: 100%;
+    height: auto;
 }
