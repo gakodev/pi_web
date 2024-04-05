@@ -101,7 +101,7 @@ print "</div>";
 */
 ?>
 
-<div id="cards">
+<div id="primeira_linha">
 
 <div class="center">
     
@@ -129,7 +129,7 @@ print "</div>";
     <a href="#">
       <div class="property-image">
         <div id="img2">
-        <img class="property-image" src="imgs/restaurante.jpg" alt="Fuga">
+        <img class="property-image" src="imgs/severina.png" alt="Severina">
         <div class="property-image-title">
         </div>
       </div></div></a>
@@ -149,7 +149,7 @@ print "</div>";
     <a href="#">
       <div class="property-image">
         <div id="img3">
-        <img class="property-image" src="imgs/wills.jpg" alt="Fuga">
+        <img class="property-image" src="imgs/wills.png" alt="Wills">
         <div class="property-image-title">
         </div>
       </div></div></a>
@@ -169,12 +169,14 @@ print "</div>";
   <div class="property-card">
     <a href="#">
       <div class="property-image">
+        <div id="img4">
+        <img class="property-image" src="imgs/20barra9.png" alt="20/9">
         <div class="property-image-title">
-          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
         </div>
-      </div></a>
+      </div></div></a>
     <div class="property-description">
-      <h5> Card Title </h5>
+      <h5>20/9</h5>
+      <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
     <a href="#">
@@ -187,12 +189,14 @@ print "</div>";
   <div class="property-card">
     <a href="#">
       <div class="property-image">
+        <div id="img5">
+        <img class="property-image" src="imgs/canto.png" alt="Canto bar">
         <div class="property-image-title">
-          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
         </div>
-      </div></a>
+      </div></div></a>
     <div class="property-description">
-      <h5> Card Title </h5>
+      <h5>Canto Bar</h5>
+      <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
     <a href="#">
@@ -202,14 +206,36 @@ print "</div>";
     </a>
   </div>
 
-</div>  
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div id="img5">
+        <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+        <div class="property-image-title">
+        </div>
+      </div></div></a>
+    <div class="property-description">
+      <h5>Canto Bar</h5>
+      <br>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+  </div>
 
-
-  
  
-    
 
 </div>
+
+
+<footer>
+    
+</footer>
+  
 
 
 </body>
