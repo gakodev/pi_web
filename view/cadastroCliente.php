@@ -225,6 +225,48 @@ print "</div>";
       </div>
     </a>
   </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div id="img5">
+        <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+        <div class="property-image-title">
+        </div>
+      </div></div></a>
+    <div class="property-description">
+      <h5>Canto Bar</h5>
+      <br>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+  <div class="property-card">
+    <a href="#">
+      <div class="property-image">
+        <div id="img6">
+        <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+        <div class="property-image-title">
+        </div>
+      </div></div></a>
+    <div class="property-description">
+      <h5>Canto Bar</h5>
+      <br>
+      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+    </div>
+    <a href="#">
+      <div class="property-social-icons">
+        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+      </div>
+    </a>
+  </div>
+
+
   </div>
 
  

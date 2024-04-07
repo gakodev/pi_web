@@ -125,7 +125,7 @@ p {
 }
 
 .center {
-    height: 100vh;
+    height: max-content;
     width: 100%;
     /*display: flex;
     flex-wrap: nowrap;
@@ -145,7 +145,7 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: inline-block;
-    margin: 10px;
+    margin: 25px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     /*flex-direction: column;*/
@@ -237,13 +237,9 @@ p {
     height: auto;
 }
 
-#segunda_linha {
-
-   display: inline-block;
-   height: 350px;
-   width: 350px;
-    float: left;
-   border: solid;
+#img6 {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
