@@ -8,56 +8,23 @@
 </head>
 <body>
 
+
 <header>
     <div id="div_header">
         <h1 id="logo"><img src="" alt=""></h1>
         <ul id="ul_header">
         <li><a href="#">Seja nosso parceiro!</a></li>
-        <li><a href="#">Cadastrar</a></li>
+        <li><a id="cadastro" href="#">Cadastrar</a></li>
         <li><a href="#">Entrar</a></li>
         </ul>
     </div>
 </header>
 
-
-<div id='under_header'>
-    
+<div id="blur">
 </div>
 
-<ul class="gallery">
-	<li style="background: #f44336;"></li>
-	<li style="background: #744700;"></li>
-	<li style="background: #ce7e00;"></li>
-	<li style="background: #8fce00;"></li>
-	<li style="background: #2986cc;"></li>
-    <li style="background: #16537e;"></li>
-    <li style="background: #6a329f;"></li>
-    <li style="background: #c90076;"></li>
-    <li style="background: #b4a7d6;"></li>
-    <li style="background: #f28482;"></li>
-</ul>
-
-<script>
-const slider = document.querySelector('.gallery');
-const items = document.querySelectorAll('.gallery li');
-const itemWidth = items[0].offsetWidth + 16; 
-let currentIndex = 0;
-
-function moveCarousel() {
-    currentIndex = (currentIndex + 1) % items.length; 
-    const scrollLeft = currentIndex * itemWidth;
-    slider.scrollTo({
-        left: scrollLeft,
-        behavior: 'smooth'
-    });
-    setTimeout(moveCarousel, 2000);
-}
-// Inicia a animação automática
-moveCarousel();
-</script>
-
 <?php
-/*$operacao = $_REQUEST["op"];
+$operacao = $_REQUEST["op"];
     if($operacao=="alterarCliente") {
         include "../controller/ClienteController.php";
         $res = ClienteController::resgataCliente($_REQUEST["idCliente"]);
@@ -98,10 +65,74 @@ print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
 print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
 print "</form>";
 print "</div>";
-*/
+
 ?>
 
-<div id="primeira_linha">
+
+<div id='under_header'>
+    
+</div>
+
+<ul class="gallery">
+	<li style="background: #f44336;"></li>
+	<li style="background: #744700;"></li>
+	<li style="background: #ce7e00;"></li>
+	<li style="background: #8fce00;"></li>
+	<li style="background: #2986cc;"></li>
+    <li style="background: #16537e;"></li>
+    <li style="background: #6a329f;"></li>
+    <li style="background: #c90076;"></li>
+    <li style="background: #b4a7d6;"></li>
+    <li style="background: #f28482;"></li>
+</ul>
+
+<script>
+const slider = document.querySelector('.gallery');
+const items = document.querySelectorAll('.gallery li');
+const itemWidth = items[0].offsetWidth + 16; 
+let currentIndex = 0;
+
+function moveCarousel() {
+    currentIndex = (currentIndex + 1) % items.length; 
+    const scrollLeft = currentIndex * itemWidth;
+    slider.scrollTo({
+        left: scrollLeft,
+        behavior: 'smooth'
+    });
+    setTimeout(moveCarousel, 2000);
+}
+// Inicia a animação automática
+moveCarousel();
+</script>
+
+<script>
+var condicao = new Boolean(true);
+
+function mostrarDiv(){
+ // alert("Qlr coisa");
+  //condicao = !condicao;
+  console.log(condicao);
+  if (condicao == true) {
+    var form_cliente = document.getElementById("form_cliente");
+    form_cliente.style.display = "flex";
+    var blur =document.getElementById("blur");
+    blur.style.display = "flex"
+    /*blur.style.width = "100vw"
+    blur.style.height = "100vh"*/;
+} else {
+    var form_cliente = document.getElementById("form_cliente");
+    form_cliente.style.display = "none";
+}
+}
+
+var botao = document.getElementById("cadastro");
+botao.addEventListener("click", mostrarDiv);
+
+
+</script>
+
+
+
 
 <div class="center">
     
@@ -118,11 +149,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -138,11 +164,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -158,11 +179,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
 
@@ -179,11 +195,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -199,11 +210,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -219,11 +225,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -239,11 +240,6 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
 
   <div class="property-card">
@@ -259,25 +255,23 @@ print "</div>";
       <br>
       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
     </div>
-    <a href="#">
-      <div class="property-social-icons">
-        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-      </div>
-    </a>
   </div>
+
+  
 
 
   </div>
 
  
 
-</div>
+
 
 
 <footer>
     
 </footer>
   
+<!-- fim da div "blur" -->
 
 
 </body>

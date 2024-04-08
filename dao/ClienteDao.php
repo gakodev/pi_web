@@ -79,7 +79,7 @@
 
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "DELETE FROM cliente WHERE id = '$idCliente'";
+        $sql = "DELETE FROM cliente WHERE idCliente = '$idCliente'";
 
         $res = $conex->conn->query($sql);
 
