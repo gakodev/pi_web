@@ -82,25 +82,39 @@ li a:hover:not(.active) {
 
 #blur{
     
-    display: none; /* Começa oculta */
-    position: fixed; /* Posição fixa para garantir que ela não se mova com o restante da página */
-    top: 0; /* Alinhada ao topo da janela */
-    left: 0; /* Alinhada à esquerda da janela */
-    width: 100%; /* Ocupa toda a largura da janela */
-    height: 100%; /* Ocupa toda a altura da janela */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência para dar um efeito de 'oculto' */
-    z-index: 5; /* Valor alto de z-index para garantir que apareça acima de outras divs */
-    
-    
+    display: flex;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 5;
 }
 
 #form_cliente {
 
     background-color: #FF6400;
     position: fixed;
-    display: none;
+    display: flex;
     z-index: 6;
     border: solid wheat;
+    height: 300px;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2vh;
+}
+
+#div_central {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 300px;
+    
 }
 
 
@@ -156,8 +170,7 @@ p {
     height: max-content;
     width: 100%;
     padding: 50px;
-    margin: 5px ;
-    border: solid;
+
 }
 
 /* CLASSE DE DESIGN DO CARD  */
@@ -194,7 +207,7 @@ p {
     background-repeat: no-repeat;
 }
 
-/* CLASSE DE DESIGN DO  */
+/* CLASSE DE DESIGN DA DESCRIÇÃO */
 
 .property-description {
     background-color: #FAFAFC;

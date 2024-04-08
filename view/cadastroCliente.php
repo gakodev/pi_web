@@ -48,6 +48,7 @@ $operacao = $_REQUEST["op"];
         $operacao = "cadastrarCliente";
     }
     
+print "<div id='div_central'>";
 print "<div id='form_cliente'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='nome'>nome:</label>";
@@ -64,6 +65,7 @@ print "<input class='entrada' type='hidden' name='id' value='$idCliente'><br>";
 print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
 print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
 print "</form>";
+print "</div>";
 print "</div>";
 
 ?>
@@ -109,16 +111,12 @@ moveCarousel();
 var condicao = new Boolean(true);
 
 function mostrarDiv(){
- // alert("Qlr coisa");
-  //condicao = !condicao;
   console.log(condicao);
   if (condicao == true) {
     var form_cliente = document.getElementById("form_cliente");
     form_cliente.style.display = "flex";
     var blur =document.getElementById("blur");
-    blur.style.display = "flex"
-    /*blur.style.width = "100vw"
-    blur.style.height = "100vh"*/;
+    blur.style.display = "flex";
 } else {
     var form_cliente = document.getElementById("form_cliente");
     form_cliente.style.display = "none";
