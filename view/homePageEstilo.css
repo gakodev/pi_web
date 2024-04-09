@@ -80,9 +80,15 @@ li a:hover:not(.active) {
 
 }
 
+
+
+
+
+
+
 #blur{
     
-    display: flex;
+    display: none;
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -90,30 +96,62 @@ li a:hover:not(.active) {
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 5;
-}
-
-#form_cliente {
-
-    background-color: #FF6400;
-    position: fixed;
-    display: flex;
-    z-index: 6;
-    border: solid wheat;
-    height: 300px;
-    width: 250px;
-    align-items: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 2vh;
+    border: solid;
 }
 
 #div_central {
 
-    display: flex;
+    display: none;
+    position: fixed;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 300px;
+    height: 600px;
+    width: 100%;
+    z-index: 5;
+}
+
+#card_cadastro {
+
+    background-color: #FF6400;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 6;
+    border: solid wheat;
+    height: 500px;
+    width: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2vh;
+    color: white;
+    align-items: flex-end;
+    align-items: center;
+    
+    
+}
+
+#X {
+    width: 350px;
+    height: max-content;
+    padding: 7px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+#imgX {
+    height: 40px;
+    width: 40px;
+}
+
+#div_formulario {
+
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 400px;
+    width: 330px;
     
 }
 
@@ -188,6 +226,7 @@ p {
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 16px;
     overflow: hidden;
+    border: solid;
     /* sombra */
     /*-webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
     box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
@@ -246,7 +285,7 @@ p {
 
 #img1 {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 #img2 {

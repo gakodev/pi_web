@@ -48,23 +48,34 @@ $operacao = $_REQUEST["op"];
         $operacao = "cadastrarCliente";
     }
     
+    
 print "<div id='div_central'>";
-print "<div id='form_cliente'>";
+print "<div id='card_cadastro'>";
+print "<div id='X'>";
+print "<a id='botaoX' href= 'cadastroCliente.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
+print "</div>";
+print "<div id='div_formulario'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
-print "<label for='nome'>nome:</label>";
+print "<label for='nome'>Nome:</label>";
+print "<br>";
 print "<input class='entrada' type='text' name='nome' value=".$nome."><br>";
-print "<label for='cpf'>cpf:</label>";
+print "<label for='cpf'>CPF:</label>";
+print "<br>";
 print "<input class='entrada' type='text' name='cpf' value =".$cpf."><br>";
-print "<label for='dataNascimento'>data de nascimento:</label>";
+print "<label for='dataNascimento'>Data de nascimento:</label>";
+print "<br>";
 print "<input class='entrada' type='text' name='dataNascimento' value=".$dataNascimento."><br>";
-print "<label for='numCelular'>NÚMERO DE CONTATO:</label>";
+print "<label for='numCelular'>Numéro de celular:</label>";
+print "<br>";
 print "<input class='entrada' type='number' name='numCelular' value=".$numCelular."><br>";
-print "<label for='email'>E-MAIL:</label>";
+print "<label for='email'>E-mail:</label>";
+print "<br>";
 print "<input class='entrada' type='text' name='email' value=".$email."><br>";
 print "<input class='entrada' type='hidden' name='id' value='$idCliente'><br>";
 print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
 print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
 print "</form>";
+print "</div>";
 print "</div>";
 print "</div>";
 
@@ -113,18 +124,28 @@ var condicao = new Boolean(true);
 function mostrarDiv(){
   console.log(condicao);
   if (condicao == true) {
-    var form_cliente = document.getElementById("form_cliente");
-    form_cliente.style.display = "flex";
+    var card_cadastro = document.getElementById("card_cadastro");
+    card_cadastro.style.display = "flex";
     var blur =document.getElementById("blur");
     blur.style.display = "flex";
+    var div_central =document.getElementById("div_central");
+    div_central.style.display = "flex";
 } else {
-    var form_cliente = document.getElementById("form_cliente");
-    form_cliente.style.display = "none";
+    var card_cadastro = document.getElementById("card_cadastro");
+    card_cadastro.style.display = "none";
+    var blur =document.getElementById("blur");
+    blur.style.display = "none";
+    var div_central =document.getElementById("div_central");
+    div_central.style.display = "none";
 }
 }
 
 var botao = document.getElementById("cadastro");
 botao.addEventListener("click", mostrarDiv);
+
+var botaoX = document.getElementById("botaoX");
+botaoX.addEventListener("click", mostrarDiv);
+
 
 
 </script>
