@@ -7,7 +7,7 @@
 }
 
 body {
-   background-color: lightsteelblue; 
+   background-color: rgb(226, 232, 240); 
    overflow: visible;
 }
 
@@ -131,13 +131,19 @@ li a:hover:not(.active) {
     
 }
 
+#logo_noform {
+    height: 150px;
+    width: 300px;
+}
+
 #X {
     width: 350px;
     height: max-content;
-    padding: 7px;
+    padding: 17px;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
+    /*flex-direction: row-reverse;*/
+    justify-content: space-between;
+    
 }
 
 #imgX {
@@ -155,10 +161,13 @@ li a:hover:not(.active) {
     
 }
 
-
-
-
-
+.entrada {
+    height: 30px;
+    width: 290px;
+    border: solid;
+    border-style: inset;
+    border-radius: 2vh;
+}
 
 .gallery {
     padding: 1rem;
@@ -211,7 +220,7 @@ p {
 
 }
 
-/* CLASSE DE DESIGN DO CARD  */
+/* classe das propriedades de desing do card  */
 
 .property-card {
     height: 20em;
@@ -226,13 +235,12 @@ p {
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 16px;
     overflow: hidden;
-    border: solid;
     /* sombra */
     /*-webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
     box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
 }
 
-/* CLASSE DE DESIGN DA IMAGEM  */
+/* classe das propriedades de design da imagem do card  */
 
 .property-image {
     height: 8em;
@@ -246,10 +254,11 @@ p {
     background-repeat: no-repeat;
 }
 
-/* CLASSE DE DESIGN DA DESCRIÇÃO */
+/* classe das propriedades de design da descrição dos cards */
 
 .property-description {
-    background-color: #FAFAFC;
+    background-color: #FF6400;
+    color: white;
     height: 12em;
     width: 18em;
     position: absolute;
@@ -262,7 +271,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Property Cards Hover States */
+/* animações quando o indicador fica encima do card */
 
 .property-card:hover .property-description {
     height: 0em;

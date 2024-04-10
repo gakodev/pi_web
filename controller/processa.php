@@ -1,4 +1,5 @@
 <?php
+
 switch ($_REQUEST["op"]){
     // OPCOES CLIENTE
     case "cadastrarCliente":
@@ -62,8 +63,7 @@ function excluirCliente (){
     $cntrl->excluirCliente($idCliente);
 }
 function listarCliente () {
-    include '../view/listarClientes.php';
-    // MUDAR O CAMINHO
+    echo '<script>location.href="../view/cadastroCliente.php"</script>';
 }
 
     // funções do estabelecimento;
@@ -99,7 +99,6 @@ function excluirEstabelecimento (){
 }
 function listarEstabelecimento () {
     include '../view/listarClientes.php';
-    // MUDAR O CAMINHO
 }
 
     // funções da reserva;

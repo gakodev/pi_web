@@ -25,7 +25,6 @@
             echo '<script>alert("Erro!")</script>';
         }
         echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
-        // ALTERAR ESSA LINHA !!!
     }
 
     public function listarClientes() { 

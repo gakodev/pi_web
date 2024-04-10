@@ -52,6 +52,7 @@ $operacao = $_REQUEST["op"];
 print "<div id='div_central'>";
 print "<div id='card_cadastro'>";
 print "<div id='X'>";
+print "<img id= 'logo_noform' src='imgs/cortado.png' alt=''>";
 print "<a id='botaoX' href= 'cadastroCliente.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
 print "</div>";
 print "<div id='div_formulario'>";
@@ -73,7 +74,7 @@ print "<br>";
 print "<input class='entrada' type='text' name='email' value=".$email."><br>";
 print "<input class='entrada' type='hidden' name='id' value='$idCliente'><br>";
 print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
-print "<input class='entrada' class='butao' type='submit' value = '$operacao'>";
+print "<input class='butao' type='submit' value = '$operacao'>";
 print "</form>";
 print "</div>";
 print "</div>";
@@ -92,11 +93,11 @@ print "</div>";
 	<li style="background: #ce7e00;"></li>
 	<li style="background: #8fce00;"></li>
 	<li style="background: #2986cc;"></li>
-    <li style="background: #16537e;"></li>
-    <li style="background: #6a329f;"></li>
-    <li style="background: #c90076;"></li>
-    <li style="background: #b4a7d6;"></li>
-    <li style="background: #f28482;"></li>
+  <li style="background: #16537e;"></li>
+  <li style="background: #6a329f;"></li>
+  <li style="background: #c90076;"></li>
+  <li style="background: #b4a7d6;"></li>
+  <li style="background: #f28482;"></li>
 </ul>
 
 <script>
