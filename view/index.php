@@ -54,7 +54,7 @@ print "<div id='card_cadastro'>";
 print "<div id='cabecalho'>";
 print "<div id='la_ele'><img id= 'logo_noform' src='imgs/reserve.png' alt=''></div>";
 print "<div id='X'>";
-print "<a id='botaoX' href= 'cadastroCliente.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
+print "<a id='botaoX' href= 'index.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
 print "</div>";
 print "</div>";
 print "<hr>";
