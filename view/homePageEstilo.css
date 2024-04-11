@@ -11,9 +11,6 @@ body {
    overflow: visible;
 }
 
-
-
-
 header {
 
     background-color: #FF6400;
@@ -80,12 +77,6 @@ li a:hover:not(.active) {
 
 }
 
-
-
-
-
-
-
 #blur{
     
     display: none;
@@ -128,27 +119,49 @@ li a:hover:not(.active) {
     align-items: flex-end;
     align-items: center;
     
-    
 }
 
+#cabecalho {
+
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    justify-content: space-between;
+
+}
+
+#la_ele {
+
+    padding-top: 10px;
+}
+
+
 #logo_noform {
-    height: 150px;
-    width: 300px;
+
+    height: auto;
+    width: auto;
 }
 
 #X {
-    width: 350px;
+
+    width: max-content;
     height: max-content;
-    padding: 17px;
+    padding-left: -15px;
     display: flex;
-    /*flex-direction: row-reverse;*/
-    justify-content: space-between;
+    padding: 10px;
     
 }
 
 #imgX {
+
     height: 40px;
     width: 40px;
+}
+
+
+#divisao {
+
+    size: 75%;
 }
 
 #div_formulario {
@@ -226,7 +239,7 @@ p {
     height: 20em;
     width: 18em;
     display: inline-block;
-    margin: 3px;
+    margin: 2px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     position: relative;

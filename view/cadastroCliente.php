@@ -11,7 +11,7 @@
 
 <header>
     <div id="div_header">
-        <h1 id="logo"><img src="" alt=""></h1>
+        <img id= 'logo_noform' src='imgs/reserve.png' alt=''>
         <ul id="ul_header">
         <li><a href="#">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
@@ -51,10 +51,13 @@ $operacao = $_REQUEST["op"];
     
 print "<div id='div_central'>";
 print "<div id='card_cadastro'>";
+print "<div id='cabecalho'>";
+print "<div id='la_ele'><img id= 'logo_noform' src='imgs/reserve.png' alt=''></div>";
 print "<div id='X'>";
-print "<img id= 'logo_noform' src='imgs/cortado.png' alt=''>";
 print "<a id='botaoX' href= 'cadastroCliente.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
 print "</div>";
+print "</div>";
+print "<hr id = ' divisao ' >";
 print "<div id='div_formulario'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='nome'>Nome:</label>";
