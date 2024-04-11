@@ -159,9 +159,8 @@ li a:hover:not(.active) {
 }
 
 
-#divisao {
-
-    size: 75%;
+hr {
+    width: 300px;
 }
 
 #div_formulario {

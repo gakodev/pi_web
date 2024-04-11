@@ -63,7 +63,7 @@ function excluirCliente (){
     $cntrl->excluirCliente($idCliente);
 }
 function listarCliente () {
-    echo '<script>location.href="../view/cadastroCliente.php"</script>';
+    echo '<script>location.href="../view/index.php"</script>';
 }
 
     // funções do estabelecimento;

@@ -57,7 +57,7 @@ print "<div id='X'>";
 print "<a id='botaoX' href= 'cadastroCliente.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
 print "</div>";
 print "</div>";
-print "<hr id = ' divisao ' >";
+print "<hr>";
 print "<div id='div_formulario'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
 print "<label for='nome'>Nome:</label>";
