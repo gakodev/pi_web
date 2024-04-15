@@ -11,7 +11,7 @@
 
 <header>
     <div id="div_header">
-        <img id= 'logo_noform' src='imgs/reserve.png' alt=''>
+        <img src='imgs/logonobg.png' alt=''>
         <ul id="ul_header">
         <li><a href="#">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
@@ -24,35 +24,19 @@
 </div>
 
 <?php
-$operacao = $_REQUEST["op"];
-    if($operacao=="alterarCliente") {
-        include "../controller/ClienteController.php";
-        $res = ClienteController::resgataCliente($_REQUEST["idCliente"]);
-        $qtd = $res->rowCount();
-        $row = $res->fetch(PDO::FETCH_OBJ);
-        $idCliente = $row->idCliente;
-        $nome = $row->nome;
-        $cpf = $row->cpf;
-        $cnpj = $row->cnpj;
-        $dataNascimento = $row->dataNascimento;
-        $numCelular = $row->numCelular;
-        $email = $row->email;
-        $operacao = "alterarCliente";
-    }   else {
-        $idCliente = "";
-        $nome = "";
-        $cpf = "";
-        $dataNascimento = "";
-        $numCelular = "";
-        $email = "";
-        $operacao = "cadastrarCliente";
-    }
     
+    $idCliente = "";
+    $nome = "";
+    $cpf = "";
+    $dataNascimento = "";
+    $numCelular = "";
+    $email = "";
+    $operacao = "cadastrarCliente";
     
 print "<div id='div_central'>";
 print "<div id='card_cadastro'>";
 print "<div id='cabecalho'>";
-print "<div id='la_ele'><img id= 'logo_noform' src='imgs/reserve.png' alt=''></div>";
+print "<div id='la_ele'><img id= 'logo_noform' src='imgs/logo_cortado.png' alt=''></div>";
 print "<div id='X'>";
 print "<a id='botaoX' href= 'index.php'><img id='imgX' src='imgs/x.png' alt=''></a>";
 print "</div>";
@@ -60,24 +44,30 @@ print "</div>";
 print "<hr>";
 print "<div id='div_formulario'>";
 print "<form id='formulario' method='post' action='../controller/processa.php'>";
-print "<label for='nome'>Nome:</label>";
+print "<label class='text_card' for='nome'>Nome:</label>";
 print "<br>";
 print "<input class='entrada' type='text' name='nome' value=".$nome."><br>";
-print "<label for='cpf'>CPF:</label>";
+print "<br>";
+print "<label class='text_card' for='cpf'>CPF:</label>";
 print "<br>";
 print "<input class='entrada' type='text' name='cpf' value =".$cpf."><br>";
-print "<label for='dataNascimento'>Data de nascimento:</label>";
+print "<br>";
+print "<label class='text_card' for='dataNascimento'>Data de nascimento:</label>";
 print "<br>";
 print "<input class='entrada' type='text' name='dataNascimento' value=".$dataNascimento."><br>";
-print "<label for='numCelular'>Numéro de celular:</label>";
+print "<br>";
+print "<label class='text_card' for='numCelular'>Numéro de celular:</label>";
 print "<br>";
 print "<input class='entrada' type='number' name='numCelular' value=".$numCelular."><br>";
-print "<label for='email'>E-mail:</label>";
+print "<br>";
+print "<label class='text_card' for='email'>E-mail:</label>";
 print "<br>";
 print "<input class='entrada' type='text' name='email' value=".$email."><br>";
 print "<input class='entrada' type='hidden' name='id' value='$idCliente'><br>";
 print "<input class='entrada' type='hidden' name='op' value='$operacao'><br>";
-print "<input class='butao' type='submit' value = '$operacao'>";
+print "<div id='div_botao'>";
+print "<input class='butao' type='submit' value = 'Realizar o cadastro'>";
+print "</div>";
 print "</form>";
 print "</div>";
 print "</div>";

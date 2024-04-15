@@ -11,6 +11,8 @@ body {
    overflow: visible;
 }
 
+
+
 header {
 
     background-color: #FF6400;
@@ -19,6 +21,7 @@ header {
     display: flex;
     height: 90px;
     justify-content: center;
+    padding-right: 10vh;
 
 }
 
@@ -87,7 +90,6 @@ li a:hover:not(.active) {
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 5;
-    border: solid;
 }
 
 #div_central {
@@ -110,9 +112,10 @@ li a:hover:not(.active) {
     flex-direction: column;
     justify-content: space-between;
     z-index: 6;
-    border: solid wheat;
-    height: 500px;
-    width: 350px;
+    border: solid;
+    border-width: 0.3vh;
+    height: 550px;
+    width: 450px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 2vh;
     color: white;
@@ -135,35 +138,46 @@ li a:hover:not(.active) {
 #la_ele {
 
     padding-top: 10px;
-}
-
-
-
-#X {
-
-    width: max-content;
-    height: max-content;
-    padding: 10px;
     
 }
 
 #imgX {
-
     height: 40px;
     width: 40px;
 }
 
+#logo_noform {
+    height: 50%;
+    width: 50%;
+}
+
 hr {
 
-    width: 300px;
+    width: 350px;
 }
 
 #div_formulario {
 
-    text-align: center;
+    text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     height: 420px;
     width: 330px;
+    margin: 40px;
+    
+}
+
+#div_botao{
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.butao {
+    
+    height: 35px;
+    width: 200px;
+    border-radius: 1vh;
+    border-style: outset;
     
 }
 
@@ -173,7 +187,14 @@ hr {
     width: 290px;
     border: solid;
     border-style: inset;
-    border-radius: 2vh;
+    border-radius: 1vh;
+    margin-left: 20px;
+}
+
+.text_card {
+
+    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .gallery {
