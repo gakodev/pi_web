@@ -9,6 +9,7 @@
 body {
    background-color: rgb(226, 232, 240); 
    overflow: visible;
+   
 }
 
 
@@ -22,6 +23,7 @@ header {
     height: 90px;
     justify-content: center;
     padding-right: 10vh;
+    z-index: 6;
 
 }
 
@@ -100,7 +102,7 @@ li a:hover:not(.active) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 600px;
+    height: 100vh;
     width: 100%;
     z-index: 5;
 }
