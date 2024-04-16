@@ -35,7 +35,7 @@
       </div>
       <hr>
       <div id='div_formulario'>
-        <form id='formulario' method='post' action='../controller/processa.php'>
+        <form id='formulario' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
           <label class='text_card' for='nome'>*Nome:</label>
           <br>
           <input id= "input1"class='entrada' type='text' name='nome' value=""><br>
@@ -65,20 +65,22 @@
     </div>
   </div>
 
-  <?php
-    function verificarCampos($nome, $cpf, $dataNascimento, $numCelular, $email)
-    {
-        
-        if (empty($nome) || empty($cpf) || empty($dataNascimento) || empty($numCelular) || empty($email)) {
-            return false; 
-        } else {
-            return true; 
-        }
+  <script>
+  function consultaCampos() {
+      var submit1 = document.getElementById("input1").value;
+      var submit2 = document.getElementById("input2").value;
+      var submit3 = document.getElementById("input3").value;
+      var submit4 = document.getElementById("input4").value;
+      var submit5 = document.getElementById("input5").value;
+      
+    if (submit1 === "" || submit2 === "" || submit3 === "" || submit4 === "" || submit5 === "") {
+      alert("Preencha todos os campos!");
+      return false;
+    } else {
+      return true;
     }
-    echo "verificarCampos";
-   
-
-  ?>
+  }
+  </script>
 
   <div id='under_header'>
 
