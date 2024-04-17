@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="homePageEstilo.css">
+  <link rel="stylesheet" type="text/css" href="indexCss.css">
   <title>Home Page</title>
 </head>
 
@@ -72,7 +72,7 @@
       var submit3 = document.getElementById("input3").value;
       var submit4 = document.getElementById("input4").value;
       var submit5 = document.getElementById("input5").value;
-      
+
     if (submit1 === "" || submit2 === "" || submit3 === "" || submit4 === "" || submit5 === "") {
       alert("Preencha todos os campos!");
       return false;

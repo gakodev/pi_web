@@ -8,8 +8,8 @@
 
 body {
    background-color: rgb(226, 232, 240); 
-   overflow: visible;
-   
+   display: flex;
+   flex-direction: row;
 }
 
 
@@ -79,7 +79,7 @@ li a:hover:not(.active) {
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: 100vw;
-    height: 50vh;
+    height: 55vh;
 
 }
 
