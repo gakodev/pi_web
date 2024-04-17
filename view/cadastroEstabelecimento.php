@@ -22,7 +22,8 @@
     </header>
 
     <div id = 'left'>
-        
+        <div id = 'lado1' class = " lados " ></div>
+        <div id = 'lado2' class = " lados "></div>
     </div>
 
     <div id = 'right'>

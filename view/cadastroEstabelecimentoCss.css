@@ -75,13 +75,21 @@ li a:hover:not(.active) {
 }
 
 #left {
+    display: flex;
     flex: 1; 
     height: 100vh;
     border: solid red;
-    padding: 90px;
 }
 
+.lados {
+    flex: 1; 
+    height: 100vh;
+    border: solid ;
+}
+
+
 #right {
+    display: flex;
     flex: 1;
     height: 100vh; 
     border: solid blue;
