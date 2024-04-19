@@ -12,22 +12,44 @@
 
     <header>
         <div id="div_header">
-            <img src='imgs/logonobg.png' alt=''>
+            <img src='imgs/logonobg_laranja.png' alt=''>
             <ul id="ul_header">
-                <li><a href="#">Seja nosso parceiro!</a></li>
-                <li><a id="cadastro" href="#">Cadastrar</a></li>
-                <li><a href="#">Entrar</a></li>
+                <li><a href="index.php"><img src="imgs/voltar.png" alt=""></a></li>
             </ul>
         </div>
     </header>
 
-    <div id = 'left'>
-        <div id = 'lado1' class = " lados " ></div>
-        <div id = 'lado2' class = " lados "></div>
+    <div id="total">
+        <div id = "e"></div>
+        <div id = "d">
+            <div id= "texto">
+                <h1>Aqui você encontra melhores resultados <br>
+                seja nosso parceiro!</h1>
+            </div>
+            <div id= "div_botoes">
+            <div id="workarea">
+  <div class="position">
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href=""><span class="spot"></span>Fazer cadastro!</a>
+        </div>
+      </svg>
     </div>
+    <!--Next button -->
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          <a href=""><span class="spot"></span>Entrar</a>
+        </div>
+      </svg>
+    </div>
+    
 
-    <div id = 'right'>
-        <h2>LADO DIREITO</h2>
+            </div>
+        </div>
     </div>
 
     <!--<div id='div_form'>
