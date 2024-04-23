@@ -27,26 +27,56 @@
   <div id="total">
     <div id="e"></div>
     <div id="d">
+
       <div id="comp">
-        <h1>A plataforma que você está buscando está aqui!</h1>
-        <p>Canalize sua demanda em uma só plataforma de gestão, nâo parca mais seu tempo<br>
-          com coisas simlples, nós resolvemos elas pra você!
-        </p>
+        <h1>A plataforma perfeita para seu estabelecimento, <br>
+          melhores seus resultados com a Reserve.</h1>
+
         <div id="icones">
-          <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/wyqtxzeh.json" trigger="hover"
-            colors="primary:#ffffff,secondary:#f2e2d9" style="width:100px;height:100px">
-          </lord-icon>
 
-          <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/wzrwaorf.json" trigger="hover"
-            colors="primary:#e4e4e4,secondary:#ffffff" style="width:100px;height:100px">
-          </lord-icon>
+          <div class="icone_e_texto">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/wyqtxzeh.json" trigger="hover"
+              colors="primary:#ffffff,secondary:#e88c30" style="width:100px;height:100px">
+            </lord-icon>
+            <p class="desc">Aproveite a oportunidade e começe a monetizar suas reservas!</p>
+          </div>
 
-          <script src="https://cdn.lordicon.com/lordicon.js"></script>
-          <lord-icon src="https://cdn.lordicon.com/abwrkdvl.json" trigger="hover"
-            colors="primary:#ffffff,secondary:#f2e2d9" style="width:100px;height:100px">
-          </lord-icon>
+          <div class="icone_e_texto">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/wzrwaorf.json" trigger="hover"
+              colors="primary:#ffffff,secondary:#e88c30" style="width:100px;height:100px">
+            </lord-icon>
+            <p class="desc">Controle suas reservas e filas de uma forma simples e organizada</p>
+          </div>
+
+          <div class="icone_e_texto">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/abwrkdvl.json" trigger="hover"
+              colors="primary:#ffffff,secondary:#e88c30" style="width:100px;height:100px">
+            </lord-icon>
+            <p class="desc">Escale sua operação organizando seu tempo e focando naquilo que realmente <br>
+              precise da sua atenção!</p>
+          </div>
+
+          <div class="icone_e_texto">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/pbbsmkso.json" trigger="hover"
+              colors="primary:#ffffff,secondary:#e88c30" style="width:100px;height:100px">
+            </lord-icon>
+            <p class="desc">Sem restrição geográfica, a plataforma pode ser acessada de qualquer <br>
+              lugar do globo</p>
+          </div>
+
+          <div class="icone_e_texto">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/piwupaqb.json" trigger="hover"
+              colors="primary:#ffffff,secondary:#e88c30" style="width:100px;height:100px">
+            </lord-icon>
+            <p class="desc">Aumente sua porcentagem de tráfego orgânico e novos clientes para seu <br>
+              estabelecimento!</p>
+          </div>
+
         </div>
       </div>
       <div id="texto">
@@ -60,7 +90,7 @@
               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                 <rect id="shape" height="40" width="150" />
                 <div id="text">
-                  <a href=""><span class="spot"></span>Começar hoje</a>
+                  <a href=""><span class="spot"></span><b>Começar hoje</b></a>
                 </div>
               </svg>
             </div>
@@ -69,7 +99,7 @@
               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                 <rect id="shape" height="40" width="150" />
                 <div id="text">
-                  <a href=""><span class="spot"></span>Entrar</a>
+                  <a href=""><span class="spot"></span><b>Entrar</b></a>
                 </div>
               </svg>
             </div>
