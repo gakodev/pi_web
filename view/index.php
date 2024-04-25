@@ -53,7 +53,12 @@
           <br>
           <label class='text_card' for='email'>*E-mail:</label>
           <br>
-          <input id= "input5" class='entrada' type='text' name='email' value=""><br>
+          <input id= "input5" class='entrada' type='text' name='email' value="">
+          <br>
+          <label class='text_card' for='pw'>*Senha:</label>
+          <br>
+          <input id= "input6" class='entrada' type='password' name='pw' value=""><br>
+          <br>
           <input class='entrada' type='hidden' name='id' value='$idCliente'><br>
           <input class='entrada' type='hidden' name='op' value='cadastrarCliente'><br>
           <div id='div_botao'>

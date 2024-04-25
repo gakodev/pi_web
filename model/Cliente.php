@@ -11,7 +11,7 @@
     
     // Construtor
     public function __construct($pw, $idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email) {
-        $this->$pw;
+        $this->pw = $pw;
         $this->idCliente = $idCliente;
         $this->nome = $nome;
         $this->cpf = $cpf;

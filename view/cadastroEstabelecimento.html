@@ -15,6 +15,9 @@
 
 <body>
 
+
+
+
   <header>
     <div id="div_header">
       <img src='imgs/logonobg_laranja.png' alt=''>
@@ -23,6 +26,40 @@
       </ul>
     </div>
   </header>
+
+  <div id="blur">
+  </div>
+
+  <div id='div_formulario'>
+        <form id='formulario' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
+          <label class='text_card' for='categoria'>*Categoria:</label>
+          <br>
+          <input id= "input1"class='entrada' type='text' name='categoria' value=""><br>
+          <br>
+          <label class='text_card' for='nomeFantasia'>*Nome Fantasia:</label>
+          <br>
+          <input id= "input2" class='entrada' type='text' name='nomeFantasia' value=""><br>
+          <br>
+          <label class='text_card' for='contato'>*Numéro de contato:</label>
+          <br>
+          <input id= "input3" class='entrada' type='text' name='contato' value=""><br>
+          <br>
+          <label class='text_card' for='endereco'>*Endereço:</label>
+          <br>
+          <input id= "input4" class='entrada' type='number' name='endereco' value=""><br>
+          <br>
+          <label class='text_card' for='pw'>*Senha:</label>
+          <br>
+          <input id= "input5" class='entrada' type='password' name='pw' value="">
+          <br>
+          <input class='entrada' type='hidden' name='id' value='$idEstabelecimento'><br>
+          <input class='entrada' type='hidden' name='op' value='cadastrarEstabelecimento'><br>
+          <div id='div_botao'>
+            <input class='butao' name='cadastro' type='submit' value='Realizar o cadastro'>
+          </div>
+          </form>
+    </div>
+
 
   <div id="total">
     <div id="e"></div>
@@ -89,17 +126,17 @@
             <div class="svg-wrapper">
               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                 <rect id="shape" height="40" width="150" />
-                <div id="text">
-                  <a href=""><span class="spot"></span><b>Começar hoje</b></a>
-                </div>
+
               </svg>
+              <a id="cadastroEst" href="#"><span id="testando" class="spot"></span><b>Começar hoje</b></a>
+
             </div>
 
             <div class="svg-wrapper">
               <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
                 <rect id="shape" height="40" width="150" />
                 <div id="text">
-                  <a href=""><span class="spot"></span><b>Entrar</b></a>
+                  <a id="login" href="#"><span class="spot"></span><b>Entrar</b></a>
                 </div>
               </svg>
             </div>
@@ -109,41 +146,6 @@
     </div>
   </div>
 
-
-
-  </div>
-  </div>
-  </div>
-
-  <!--<div id='div_form'>
-        <form id='formulario' method='post' action='../controller/processa.php'>
-            <label for='categoria'>categoria:</label>
-            <input class='entrada' type='text' name='categoria' value=".$categoria."><br>
-            <label for='nomeFantasia'>nomeFantasia:</label>
-            <input class='entrada' type='text' name='nomeFantasia' value=".$nomeFantasia."><br>
-            <label for='cnpj'>cnpj:</label>
-            <input class='entrada' type='text' name='cnpj' value=".$cnpj."><br>
-            <label for='contato'>contato:</label>
-            <input class='entrada' type='number' name='contato' value=".$contato."><br>
-            <label for='endereco'>endereco:</label>
-            <input class='entrada' type='text' name='endereco' value=".$endereco."><br>
-            <input class='entrada' type='hidden' name='id' value='$idEstabelecimento'><br>
-            <input class='entrada' type='hidden' name='op' value='$operacao'><br>
-            <input class='entrada' class='butao' type='submit' value='$operacao'>
-        </form>
-    </div>
-    -->
-
-  <?php
-  $idEstabelecimento = "";
-  $categoria = "";
-  $nomeFantasia = "";
-  $cnpj = "";
-  $contato = "";
-  $endereco = "";
-  $operacao = "cadastrarEstabelecimento";
-  ?>
-
+<script src="js/funcoesEst.js"></script>
 </body>
-
 </html>

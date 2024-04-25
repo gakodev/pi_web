@@ -4,8 +4,9 @@ function consultaCampos() {
     var submit3 = document.getElementById("input3").value;
     var submit4 = document.getElementById("input4").value;
     var submit5 = document.getElementById("input5").value;
+    var submit6 = document.getElementById("input6").value;
 
-  if (submit1 === "" || submit2 === "" || submit3 === "" || submit4 === "" || submit5 === "") {
+  if (submit1 === "" || submit2 === "" || submit3 === "" || submit4 === "" || submit5 === "" || submit6 === "") {
     alert("Preencha todos os campos!");
     return false;
   } else {
@@ -57,4 +58,5 @@ const slider = document.querySelector('.gallery');
     var botaoX = document.getElementById("botaoX");
     botaoX.addEventListener("click", mostrarDiv);
 
+   
 

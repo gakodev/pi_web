@@ -34,6 +34,7 @@ switch ($_REQUEST["op"]){
     // funções do cliente;
     }
 function cadastrarCliente (){
+    $pw = $_POST["pw"];
     $nome = $_POST["nome"];
     $cpf = $_POST["cpf"];
     $dataNascimento = $_POST["dataNascimento"];
@@ -42,7 +43,7 @@ function cadastrarCliente (){
    
     include_once 'ClienteController.php';
     $cntrl = new ClienteController();
-    $cntrl->cadastrarCliente($nome, $cpf, $dataNascimento, $numCelular, $email);
+    $cntrl->cadastrarCliente($pw, $nome, $cpf, $dataNascimento, $numCelular, $email);
 }
 function alterarCliente () {
     $idCliente = $_POST ["idCliente"];
@@ -69,6 +70,7 @@ function listarCliente () {
     // funções do estabelecimento;
 
 function cadastrarEstabelecimento (){
+    $pw = $_POST["pw"];
     $categoria = $_POST["categoria"];
     $nomeFantasia = $_POST["nomeFantasia"];
     $cnpj = $_POST["cnpj"];
@@ -77,7 +79,7 @@ function cadastrarEstabelecimento (){
    
     include_once 'EstabelecimentoController.php';
     $cntrl = new EstabelecimentoController();
-    $cntrl->cadastrarEstabelecimento($categoria, $nomeFantasia, $cnpj, $contato, $endereco);
+    $cntrl->cadastrarEstabelecimento($pw, $categoria, $nomeFantasia, $cnpj, $contato, $endereco);
 }
 function alterarEstabelecimento () {
     $idEstabelecimento = $_POST ["idEstabelecimento"];

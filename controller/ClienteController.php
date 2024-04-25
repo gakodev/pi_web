@@ -4,7 +4,7 @@
 
         public static function cadastrarCliente ($pw, $nome, $cpf, $dataNascimento, $numCelular, $email) {
             include_once "../model/Cliente.php";
-            $model = new Cliente ($pw, $null, $nome, $cpf, $dataNascimento, $numCelular, $email);
+            $model = new Cliente ($pw, null, $nome, $cpf, $dataNascimento, $numCelular, $email);
             $model->cadastrarCliente($model);
         }
 
