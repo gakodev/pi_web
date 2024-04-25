@@ -2,6 +2,7 @@
 
     class Estabelecimento{
 
+        private $pw;
         private $idEstabelecimento;
         private $categoria;
         private $nomeFantasia;
@@ -10,7 +11,8 @@
         private $endereco;
         
     // Construtor
-    public function __construct($idEstabelecimento, $categoria, $nomeFantasia, $cnpj, $contato, $endereco) {
+    public function __construct($pw, $idEstabelecimento, $categoria, $nomeFantasia, $cnpj, $contato, $endereco) {
+        $this->pw = $pw;
         $this->idEstabelecimento = $idEstabelecimento;
         $this->categoria = $categoria;
         $this->nomeFantasia = $nomeFantasia;
@@ -20,6 +22,11 @@
     }
 
     // Getters
+
+    public function getPw() {
+        return $this->pw;
+    }
+
     public function getIdEstabelecimento() {
         return $this->idEstabelecimento;
     }
@@ -45,6 +52,10 @@
     }
 
     // Setters
+
+    public function setPw($pw) {
+        $this->pw = $pw;
+    }
     public function setIdEstabelecimento($idEstabelecimento) {
         $this->idEstabelecimento = $idEstabelecimento;
     }

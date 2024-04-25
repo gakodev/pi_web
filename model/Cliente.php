@@ -1,7 +1,7 @@
 <?php
 
     class Cliente {
-
+        private $pw;
         private $idCliente;
         private $nome;
         private $cpf;
@@ -10,7 +10,8 @@
         private $email;
     
     // Construtor
-    public function __construct($idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email) {
+    public function __construct($pw, $idCliente, $nome, $cpf, $dataNascimento, $numCelular, $email) {
+        $this->$pw;
         $this->idCliente = $idCliente;
         $this->nome = $nome;
         $this->cpf = $cpf;
@@ -20,6 +21,11 @@
     }
 
     // Getters
+
+    public function getPw() {
+        return $this->pw;
+    }
+
     public function getIdCliente() {
         return $this->idCliente;
     }
@@ -45,6 +51,11 @@
     }
 
     // Setters
+
+    public function setPw($pw) {
+        $this->pw = $pw;
+    }
+
     public function setIdCliente($idCliente) {
         $this->idCliente = $idCliente;
     }

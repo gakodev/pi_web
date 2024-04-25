@@ -7,11 +7,12 @@
     
             $conex = new Conexao();
             $conex->fazConexao();
-            $sql = "INSERT INTO estabelecimento (categoria, nomeFantasia, cnpj, contato, endereco)
-                VALUES (:categoria, :nomeFantasia, :cnpj, :contato, :endereco)";
+            $sql = "INSERT INTO estabelecimento (pw, categoria, nomeFantasia, cnpj, contato, endereco)
+                VALUES (:pw, :categoria, :nomeFantasia, :cnpj, :contato, :endereco)";
                 
             $stmt = $conex->conn->prepare($sql);
     
+            $stmt->bindValue(':pw', $estabelecimento->getPw());
             $stmt->bindValue(':categoria', $estabelecimento->getCategoria());
             $stmt->bindValue(':nomeFantasia', $estabelecimento->getNomeFantasia());
             $stmt->bindValue(':cnpj', $estabelecimento->getCnpj());

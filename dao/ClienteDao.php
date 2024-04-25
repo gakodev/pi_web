@@ -6,11 +6,12 @@
 
         $conex = new Conexao();
         $conex->fazConexao();
-        $sql = "INSERT INTO cliente (nome, cpf, dataNascimento, numCelular, email)
-            VALUES (:nome, :cpf, :dataNascimento, :numCelular, :email)";
+        $sql = "INSERT INTO cliente (pw, nome, cpf, dataNascimento, numCelular, email)
+            VALUES (:pw, :nome, :cpf, :dataNascimento, :numCelular, :email)";
             
         $stmt = $conex->conn->prepare($sql);
 
+        $stmt->bindValue(':pw', $cliente->getPw());
         $stmt->bindValue(':nome', $cliente->getNome());
         $stmt->bindValue(':cpf', $cliente->getCpf());
         $stmt->bindValue(':dataNascimento', $cliente->getdataNascimento() );
