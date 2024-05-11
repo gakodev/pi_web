@@ -2,7 +2,6 @@
 
     padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -135,19 +134,20 @@ li a:hover:not(.active) {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     height: 100%;
+    width: 100%;
 }
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 #e, #d {
     
     height: 100%;
-    width: 100vh;
-
+    width: 100%;
 }
 
 #e {
@@ -159,14 +159,14 @@ body, html {
     font-family: "Chivo", sans-serif;
     align-items: center;
     text-align: left;
-    padding-top: 90px;
+    padding-top: 120px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#comp {
+#title {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -174,6 +174,10 @@ body, html {
     text-align: left;
     height: 100%;
     width: 100%;
+}
+
+.laranja {
+    color: orange;
 }
 
 #icones {
@@ -206,76 +210,93 @@ body, html {
 
     display: flex;
     padding: 40px;
-    justify-content: space-between;
+    width: 75%;
+    justify-content: space-around;
 }
 
-.butao {
-
-    font-family: Arial, Helvetica, sans-serif;
-    height: 75px;
-    width: 150px;
-    border-radius: 2vh;
-}
-  
-  
-#personal {
-
-    color:white;
-    text-decoration:none;
-    position:absolute;
-    bottom:15px;
-    right:2%;
-}
-  
-  
-.spot {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.svg-wrapper {
-    margin-top: 0;
-    position: relative;
-    width: 150px;
-    /*make sure to use same height/width as in the html*/
-    height: 40px;
+.button-27 {
+    appearance: none;
+    background-color: orange;
+    border: orange;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
     display: inline-block;
-    border-radius: 3px;
-    margin-left: 5px;
-    margin-right: 5px
-}
-  
-#shape {
-    stroke-width: 6px;
-    fill: transparent;
-    stroke: #fff6ea;
-    stroke-dasharray: 85 400;
-    stroke-dashoffset: -220;
-    transition: 1s all ease;
-}
-  
-  
-#text {
-    margin-top: -35px;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
     text-align: center;
-}
-
-
-  
-#text a {
-    color: white;
     text-decoration: none;
-    font-weight: 100;
-    font-size: 1.1em;
-}
- 
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
   
-.svg-wrapper:hover #shape {
-    stroke-dasharray: 50 0;
-    stroke-width: 3px;
-    stroke-dashoffset: 0;
-    stroke: #06D6A0;
-}
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .button-28 {
+    appearance: none;
+    background-color: white;
+    border: solid white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #ff5400;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+  
+  .button-28:disabled {
+    pointer-events: none;
+  }
+  
+  .button-28:hover {
+    color: white;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    border: solid orange;
+  }
+  
+  .button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }

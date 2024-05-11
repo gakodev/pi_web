@@ -14,7 +14,7 @@
     <div id="div_header">
       <img src='imgs/logonobg.png' alt=''>
       <ul id="ul_header">
-        <li><a href="cadastroEstabelecimento.php">Seja nosso parceiro!</a></li>
+        <li><a href="cadastroEstabelecimento.html">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
         <li><a href="#">Entrar</a></li>
       </ul>
