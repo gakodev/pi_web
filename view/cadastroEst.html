@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cadastroEst.css'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="total">
+        <div id="e">
+            <div id="titulo">
+                <h1>Registre-se!</h1>
+                <h2>Começe com um simples cadastro!</h2>
+            </div>
+            <div id="form">
+                <form id='formulario' method='post' action='../controller/processa.php'
+                    onsubmit="return consultaCampos()">
+                    <label id="cat" for='categoria'>Em qual categoria o seu negócio se encaixa?:</label>
+                    <select id="input1" name="categoria">
+                        <option value="restaurante">Restaurante</option>
+                        <option value="bar">Bar</option>
+                        <option value="barefestas">Bar e festas</option>
+                        <option value="outros">Outros</option>
+                    </select>            
+                    
+                    <br><br>
+                    <label class="text_card" for="nomeFantasia">Nome Fantasia:</label>
+                    <br>
+                    <input id="input2" type="text" name="nomeFantasia">
+                    <br><br>
+                    <label class="text_card" for="cnpj">CNPJ:</label>
+                    <br>
+                    <input id="input3" type="text" name="cnpj">
+                    <br><br>
+                    <label class="text_card" for="contato">Número de contato:</label>
+                    <br>
+                    <input id="input4" type="text" name="contato">
+                    <br><br>
+                    <label class="text_card" for="endereco">Endereço:</label>
+                    <br>
+                    <input id="input5" type="text" name="endereco">
+                    <br><br>
+                    <label class="text_card" for="pw">Senha:</label>
+                    <br>
+                    <input id="input5" type='password' name='pw'>
+                    <br>
+                    <input class='entrada' type='hidden' name='id' value='$idEstabelecimento'><br>
+                    <input class='entrada' type='hidden' name='op' value='cadastrarEstabelecimento'><br>
+                </form>
+            </div>
+        </div>
+        <div id="d"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#ff5400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#total {
+    background-color: wheat;
+    width: 1050px;
+    height: 600px;
+    border: solid 2px;
+    box-shadow: #000000 0 2px 5px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#e, #d {
+
+    height: 100%;
+    width: 100%;
+    font-family: "Questrial", sans-serif;
+    font-size: large;
+
+}
+
+#e {
+    border: solid red;
+}
+
+#titulo {
+    padding: 25px;
+
+}
+
+input{
+
+    height: 30px;
+    width: 320px;
+    border: solid;
+    border-style: inset;
+    border-radius: 1vh;
+    margin-left: 20px;
+}
+
+
+.text_card {
+
+    margin-left: 20px;
+}
+
+#d {
+    border: solid blue;
+}
+
+#cat {
+    margin-left: 20px;
+}
+
+#form {
+
+    display: flex;
+    align-items: center;
+    border: solid;
+    flex-direction: column;
+    text-align: left;
+    height: max-content;
+
+}

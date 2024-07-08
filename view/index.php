@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="indexCss.css">
   <title>Home Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet">
   
 </head>
 
@@ -14,7 +18,7 @@
     <div id="div_header">
       <img src='imgs/logonobg.png' alt=''>
       <ul id="ul_header">
-        <li><a href="cadastroEstabelecimento.html">Seja nosso parceiro!</a></li>
+        <li><a href="estabelecimentoPage.html">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
         <li><a href="#">Entrar</a></li>
       </ul>
@@ -69,9 +73,6 @@
     </div>
   </div>
 
-  <div id='under_header'>
-  </div>
-
   <ul class="gallery">
     <li style="background: #f44336;"></li>
     <li style="background: #744700;"></li>
@@ -85,11 +86,22 @@
     <li style="background: #f28482;"></li>
   </ul>
 
+  <div id='div-about'>
+    <div id='about-text'>
+      <h1>Sobre nos</h1>
+      <hr>
+      <p>Aqui é o melhor lugar para você fazer as reservas dos seus lugares favoritos! Seja pra um aniversário, comemoração, jantar romântico e seja qualquer outra ocasião. <br> 
+      Ou se você está cansado da mesmisce, aqui tem vários estabelecimentos a se conhecer; casas de festas, bares, restaurantes, cafeterias e muito mais!</p>
+    </div>
+  </div>
+
+
+
   <div class="center">
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img1">
+          <div class='card-img'>
             <img class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
             <div class="property-image-title">
             </div>
@@ -106,7 +118,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img2">
+          <div class='card-img'>
             <img class="property-image" src="imgs/severina.png" alt="Severina">
             <div class="property-image-title">
             </div>
@@ -123,7 +135,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img3">
+          <div class='card-img'>
             <img class="property-image" src="imgs/wills.png" alt="Wills">
             <div class="property-image-title">
             </div>
@@ -141,7 +153,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img4">
+          <div class='card-img'>
             <img class="property-image" src="imgs/20barra9.png" alt="20/9">
             <div class="property-image-title">
             </div>
@@ -158,7 +170,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img5">
+          <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
             <div class="property-image-title">
             </div>
@@ -175,7 +187,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img5">
+          <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
             <div class="property-image-title">
             </div>
@@ -192,7 +204,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img5">
+          <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
             <div class="property-image-title">
             </div>
@@ -209,7 +221,7 @@
     <div class="property-card">
       <a href="#">
         <div class="property-image">
-          <div id="img6">
+          <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
             <div class="property-image-title">
             </div>
