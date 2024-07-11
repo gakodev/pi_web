@@ -18,7 +18,7 @@
     <div id="div_header">
       <img src='imgs/logonobg.png' alt=''>
       <ul id="ul_header">
-        <li><a href="estabelecimentoPage.html">Seja nosso parceiro!</a></li>
+        <li><a href="pagina-do-estabelecimento.html">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
         <li><a href="#">Entrar</a></li>
       </ul>
@@ -33,10 +33,10 @@
     <div id='card_cadastro'>
       <div id='cabecalho'>
         <div id='div-form-title'>
-          <h2>Registre-se</h2>
+          <h2 class="montserrat">Registre-se</h2>
         </div>
         <div id='X'>
-          <a id='botaoX' href='index.php'><img id='imgX' src='imgs/x.png' alt=''></a>
+          <a id='botaoX' href='index.php'><img id='imgX' src='svg/x-circle.svg' alt=''></a>
         </div>
       </div>
 
@@ -54,21 +54,21 @@
             <label for="cpf">
               <img src="svg/fingerprint.svg" alt="">
             </label>
-            <input type="text" name="cpf" id="cpf-input" placeholder="CPF">
+            <input type="text" name="cpf" id="cpf-input" placeholder="CPF" maxlength="14">
           </div>
 
           <div class="div-label-input">
             <label for="dataNascimento">
               <img src="svg/calendar.svg" alt="">
             </label>
-            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="Data de nascimento">
+            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="Data de nascimento" maxlength="10">
           </div>
 
           <div class="div-label-input">
             <label for="numCelular">
               <img src="svg/telephone.svg" alt="">
             </label>
-            <input type="text" name="numCelular" id="numCelular-input" placeholder="Número para contato">
+            <input type="text" name="numCelular" id="numCelular-input" placeholder="Número para contato" maxlength="14">
           </div>
 
           <div class="div-label-input">
@@ -95,7 +95,7 @@
           <input class='entrada' type='hidden' name='id' value='$idCliente'>
           <input class='entrada' type='hidden' name='op' value='cadastrarCliente'>
           <div id='div_botao'>
-            <input class='butao' name='cadastro' type='submit' value='Realizar o cadastro'>
+            <input class="button-27" role="button" type="submit">
           </div>
         </form>
       </div>
