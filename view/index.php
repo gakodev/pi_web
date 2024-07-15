@@ -20,7 +20,7 @@
       <ul id="ul_header">
         <li><a href="pagina-do-estabelecimento.html">Seja nosso parceiro!</a></li>
         <li><a id="cadastro" href="#">Cadastrar</a></li>
-        <li><a href="#">Entrar</a></li>
+        <li><a id="login" href="#">Entrar</a></li>
       </ul>
     </div>
   </header>
@@ -36,12 +36,14 @@
           <h2 class="montserrat">Registre-se</h2>
         </div>
         <div id='X'>
-          <a id='botaoX' href='index.php'><img id='imgX' src='svg/x-circle.svg' alt=''></a>
+          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
         </div>
       </div>
 
+      <!--- FORM DE CADASTRO --->
+
       <div id='div_formulario'>
-        <form id='formulario' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
+        <form id='register-form' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
 
           <div class="div-label-input">
             <label for="nome">
@@ -61,7 +63,8 @@
             <label for="dataNascimento">
               <img src="svg/calendar.svg" alt="">
             </label>
-            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="Data de nascimento" maxlength="10">
+            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="Data de nascimento"
+              maxlength="10">
           </div>
 
           <div class="div-label-input">
@@ -100,6 +103,43 @@
         </form>
       </div>
     </div>
+
+    <!--- FORM DE LOGIN --->
+
+    <div id="card_login">
+      <div id="cabecalho-login">
+        <h2 class="montserrat">Login</h2>
+        <div id='X'>
+          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+        </div>
+      </div>
+
+      <form id="div-formlogin" action="">
+        <div class="div-label-input">
+          <label for="email">
+            <img src="svg/envelope.svg" alt="">
+          </label>
+          <input type="text" name="email" id="email-input" placeholder="E-mail">
+        </div>
+
+        <div class="div-label-input">
+          <label for="pw">
+            <img src="svg/lock.svg" alt="">
+          </label>
+          <input type="password" name="pw" id="pw-input" placeholder="Senha">
+        </div>
+        <div id='div_botao'>
+            <input class="button-27" role="button" type="submit">
+          </div>
+      </form>
+    </div>
+
+  </div>
+
+
+
+
+
   </div>
 
   <ul class="gallery">

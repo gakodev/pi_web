@@ -125,6 +125,33 @@ li a:hover:not(.active) {
     
 }
 
+#card_login {
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1vh;
+}
+
+#cabecalho-login {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho-login h2 {
+    color: #FF5400;
+}
+
+
+
+
+
+
+
 #cabecalho {
 
     display: flex;
@@ -144,7 +171,7 @@ li a:hover:not(.active) {
     
 }
 
-#imgX {
+.imgX {
     padding-top: 10%;
     height: 100%;
     width: 100%;

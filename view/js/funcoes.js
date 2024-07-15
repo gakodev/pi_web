@@ -20,11 +20,34 @@ function mostrarDiv() {
   }
 }
 
+function mostrarDivLogin() {
+  console.log(condicao);
+  if (condicao == true) {
+    var card_login = document.getElementById("card_login");
+    card_login.style.display = "flex";
+    var blur = document.getElementById("blur");
+    blur.style.display = "flex";
+    var div_central = document.getElementById("div_central");
+    div_central.style.display = "flex";
+  } else {
+    var card_login = document.getElementById("card_login");
+    card_login.style.display = "none";
+    var blur = document.getElementById("blur");
+    blur.style.display = "none";
+    var div_central = document.getElementById("div_central");
+    div_central.style.display = "none";
+  }
+}
+
 var botao = document.getElementById("cadastro");
 botao.addEventListener("click", mostrarDiv);
 
 var botaoX = document.getElementById("botaoX");
 botaoX.addEventListener("click", mostrarDiv);
+
+var botaoLogin = document.getElementById("login");
+botaoLogin.addEventListener("click", mostrarDivLogin);
+
 
 function consultaCampos() {
     var submit1 = document.getElementById("nome-input").value;
