@@ -18,7 +18,7 @@
         $stmt->bindValue(':numCelular', $cliente->getNumCelular());
         $stmt->bindValue(':email', $cliente->getEmail());
     
-            $res = $stmt->execute();
+            $res = $stmt->execute(); 
 
             if ($res) {
                 echo '<script>alert("Cadastro realizado!")</script>';

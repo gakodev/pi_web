@@ -114,22 +114,22 @@
         </div>
       </div>
 
-      <form id="div-formlogin" action="">
+      <form id="div-formlogin" method="post" action="../login/login.php">
         <div class="div-label-input">
           <label for="email">
             <img src="svg/envelope.svg" alt="">
           </label>
-          <input type="text" name="email" id="email-input" placeholder="E-mail">
+          <input type="text" name="email" id="email-input-login" placeholder="E-mail" required>
         </div>
 
         <div class="div-label-input">
           <label for="pw">
             <img src="svg/lock.svg" alt="">
           </label>
-          <input type="password" name="pw" id="pw-input" placeholder="Senha">
+          <input type="password" name="pw" id="pw-input-login" placeholder="Senha" required>
         </div>
         <div id='div_botao'>
-            <input class="button-27" role="button" type="submit">
+            <input class="button-27" role="button" type="submit" value="login">
           </div>
       </form>
     </div>

@@ -254,8 +254,7 @@ li a:hover:not(.active) {
     margin-top: 7px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-weight: 200;
+    font-weight: 500;
     font-style: normal;
 }
 
