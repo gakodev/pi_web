@@ -43,6 +43,7 @@
       <!--- FORM DE CADASTRO --->
 
       <div id='div_formulario'>
+        
         <form id='register-form' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
 
           <div class="div-label-input">
@@ -92,7 +93,7 @@
             <label for="pw">
               <img src="svg/lock-fill.svg" alt="">
             </label>
-            <input type="password" name="pw" id="pw-confirm-input" placeholder="Confirme sua senha!">
+            <input type="password" name="pw-confirm" id="pw-confirm-input" placeholder="Confirme sua senha!">
           </div>
 
           <input class='entrada' type='hidden' name='id' value='$idCliente'>
@@ -129,8 +130,8 @@
           <input type="password" name="pw" id="pw-input-login" placeholder="Senha" required>
         </div>
         <div id='div_botao'>
-            <input class="button-27" role="button" type="submit" value="login">
-          </div>
+          <input class="button-27" role="button" type="submit" value="login">
+        </div>
       </form>
     </div>
 

@@ -66,12 +66,12 @@ li a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    transition: 1s;
 }
 
 li a:hover:not(.active) {
 
-    background-color: #ffffff46;
-    border-radius: 4vh;
+    color: #FD3A2D ;
 }
 
 #under_header {
@@ -145,12 +145,6 @@ li a:hover:not(.active) {
 #cabecalho-login h2 {
     color: #FF5400;
 }
-
-
-
-
-
-
 
 #cabecalho {
 
@@ -288,8 +282,8 @@ h5 {
 .center {
     height: max-content;
     width: 100%;
-    padding: 50px;
     align-items: center;
+    padding: 3.3%;
 
 }
 

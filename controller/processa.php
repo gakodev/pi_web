@@ -43,6 +43,7 @@ function cadastrarCliente (){
    
     include_once 'ClienteController.php';
     $cntrl = new ClienteController();
+            
     $cntrl->cadastrarCliente($pw, $nome, $cpf, $dataNascimento, $numCelular, $email);
 }
 function alterarCliente () {
