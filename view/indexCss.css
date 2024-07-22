@@ -17,7 +17,6 @@ body {
 }
 
 header {
-
     background-color: #FF6400;
     position: fixed;
     width: 100%;
@@ -215,7 +214,6 @@ li a:hover:not(.active) {
 
 .gallery {
     width: 100%;
-    padding-top: 110px;
     display: grid;
     grid-template-columns: repeat(10, 80vw);
     grid-template-rows: 1fr;
@@ -229,8 +227,21 @@ li a:hover:not(.active) {
     
 }
 
+.gallery li {
+    position: relative; /* Para conter a imagem dentro do li */
+}
+
+.gallery li img {
+    width: 100%; /* Ajuste para ocupar todo o espaço do li */
+    height: auto; /* Para manter a proporção da imagem */
+    display: block; /* Para remover espaços em branco extras */
+    object-fit: cover; /* Para preencher completamente o espaço do li */
+}
+
 #div-about {
-    height: 250px;
+    text-align: center;
+    height: 200px;
+    margin-top: 130px;
 }
 
 #about-text {

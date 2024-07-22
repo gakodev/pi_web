@@ -13,12 +13,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-    if($user && password_verify($pw, $user['pw'])){
+    echo 'email: '.$user['email'];  
+    echo ' senha: '.$user['pw']; 
+    echo ' pw :  '.$pw;
+    echo "<script>console.log('cafralho');</script>";
+    if(password_verify($pw, $user['pw'])){
         $_SESSION['idCliente'] = $user['idCliente'];
         $_SESSION['email'] = $user['email'];
-        header('Location: ../index.php');
+        echo 'if';
+        echo "<script>alert'logou';</script>";
+        header('Location: ../view/cadastro-estabelecimento.html');
         exit();
     } else {
+        echo 'else';
         $error = 'Nome de usuário ou senha inválidos';
     }
 }

@@ -144,8 +144,8 @@
   </div>
 
   <ul class="gallery">
-    <li style="background: #f44336;"></li>
-    <li style="background: #744700;"></li>
+    <li style="background: #f44336;">  </li>
+    <li style="background: #744700;"> <img src="imgs/prato1.jpg" alt=""></li>
     <li style="background: #ce7e00;"></li>
     <li style="background: #8fce00;"></li>
     <li style="background: #2986cc;"></li>
@@ -158,7 +158,7 @@
 
   <div id='div-about'>
     <div id='about-text'>
-      <h1>Sobre nos</h1>
+      <h1>Encontrar seu próximo destino nunca foi tão fácil</h1>
       <hr>
       <p>Aqui é o melhor lugar para você fazer as reservas dos seus lugares favoritos! Seja pra um aniversário,
         comemoração, jantar romântico e seja qualquer outra ocasião. <br>
@@ -234,6 +234,74 @@
       </a>
       <div class="property-description">
         <h5>20/9</h5>
+        <br>
+        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <a href="#">
+        <div class="property-image">
+          <div class='card-img'>
+            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <div class="property-image-title">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="property-description">
+        <h5>Canto Bar</h5>
+        <br>
+        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <a href="#">
+        <div class="property-image">
+          <div class='card-img'>
+            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <div class="property-image-title">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="property-description">
+        <h5>Canto Bar</h5>
+        <br>
+        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <a href="#">
+        <div class="property-image">
+          <div class='card-img'>
+            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <div class="property-image-title">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="property-description">
+        <h5>Canto Bar</h5>
+        <br>
+        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <a href="#">
+        <div class="property-image">
+          <div class='card-img'>
+            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <div class="property-image-title">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="property-description">
+        <h5>Canto Bar</h5>
         <br>
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>

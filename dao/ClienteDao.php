@@ -1,6 +1,7 @@
 <?php
 
-class clienteDao{
+class clienteDao
+{
     public function cadastrarCliente(Cliente $cliente)
     {
         include_once 'conexao.php';
@@ -10,20 +11,36 @@ class clienteDao{
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $email = $_POST['email'];
             $pw = $_POST['pw'];
-            $pw_confirm = $_POST['pw_confirm'];
+            $pw_confirm = $_POST['pw-confirm'];
+            $cpf = $_POST['cpf'];
 
             if ($pw !== $pw_confirm) {
                 $error = 'As senhas não coincidem.';
             } else {
                 $stmt = $conex->conn->prepare("SELECT * FROM cliente WHERE email = ?");
+                $stmt = $conex->conn->prepare("SELECT * FROM cliente WHERE cpf = ?");
                 $stmt->execute([$email]);
+                $stmt->execute([$cpf]);
                 if ($stmt->fetch()) {
-                    $error = 'Email já cadastrado';
+                    $error = 'Email ou CPF já cadastrado';
                 } else {
+
                     $hashed_pw = password_hash($pw, PASSWORD_BCRYPT);
-                    $stmt = $conex->conn->prepare("INSERT INTO cliente (email, pw) VALUES (?, ?)");
-                    if ($stmt->execute([$email, $hashed_pw])) {
-                        $sucess = 'Usuário registrado.';
+                    $sql = "INSERT INTO cliente (pw, nome, cpf, dataNascimento, numCelular, email)
+                            VALUES (:pw, :nome, :cpf, :dataNascimento, :numCelular, :email)";
+
+                    $stmt = $conex->conn->prepare($sql);
+                    $stmt->bindValue(':pw', $hashed_pw);
+                    $stmt->bindValue(':nome', $cliente->getNome());
+                    $stmt->bindValue(':cpf', $cliente->getCpf());
+                    $stmt->bindValue(':dataNascimento', $cliente->getDataNascimento());
+                    $stmt->bindValue(':numCelular', $cliente->getNumCelular());
+                    $stmt->bindValue(':email', $cliente->getEmail());
+
+                    if ($stmt->execute()) {
+                        echo '<script>alert("Cadastro realizado!")</script>';
+                        echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
+                        return;
                     } else {
                         $error = 'Erro ao registrar o usuário.';
                     }
@@ -31,26 +48,10 @@ class clienteDao{
             }
         }
 
-        $sql = "INSERT INTO cliente (pw, nome, cpf, dataNascimento, numCelular, email)
-            VALUES (:pw, :nome, :cpf, :dataNascimento, :numCelular, :email)";
-
-        $stmt = $conex->conn->prepare($sql);
-
-        $stmt->bindValue(':pw', $cliente->getPw());
-        $stmt->bindValue(':nome', $cliente->getNome());
-        $stmt->bindValue(':cpf', $cliente->getCpf());
-        $stmt->bindValue(':dataNascimento', $cliente->getdataNascimento());
-        $stmt->bindValue(':numCelular', $cliente->getNumCelular());
-        $stmt->bindValue(':email', $cliente->getEmail());
-
-        $res = $stmt->execute();
-
-        if ($res) {
-            echo '<script>alert("Cadastro realizado!")</script>';
-        } else {
-            echo '<script>alert("Erro!")</script>';
+        if (isset($error)) {
+            echo '<script>alert("' . $error . '")</script>';
+            echo '<script>location.href="../view/index.php"</script>';
         }
-        echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
     }
 
     public function listarClientes()
