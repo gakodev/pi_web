@@ -12,12 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $conex->conn->prepare('SELECT * FROM cliente WHERE email = ?');
     $stmt->execute([$email]);
     $user = $stmt->fetch();
-
+    $pw_hashed = $user['pw'];
     echo 'email: '.$user['email'];  
     echo ' senha: '.$user['pw']; 
     echo ' pw :  '.$pw;
     echo "<script>console.log('cafralho');</script>";
-    if(password_verify($pw, $user['pw'])){
+
+    if(password_verify($pw, $pw_hashed)){
         $_SESSION['idCliente'] = $user['idCliente'];
         $_SESSION['email'] = $user['email'];
         echo 'if';
