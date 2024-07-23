@@ -142,7 +142,7 @@
 
 
   </div>
-
+<div id="div-gallery"> 
   <ul class="gallery">
     <li style="background: #f44336;">  </li>
     <li style="background: #744700;"> <img src="imgs/prato1.jpg" alt=""></li>
@@ -155,7 +155,7 @@
     <li style="background: #b4a7d6;"></li>
     <li style="background: #f28482;"></li>
   </ul>
-
+</div>
   <div id='div-about'>
     <div id='about-text'>
       <h1>Encontrar seu próximo destino nunca foi tão fácil</h1>
