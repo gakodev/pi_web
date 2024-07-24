@@ -20,13 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (password_verify($pw, $pw_hash)) {
             $_SESSION['idCliente'] = $user['idCliente'];
             $_SESSION['email'] = $user['email'];
-            echo 'idCliente: '.$user['idCliente']."\n";
-            echo 'email: '.$user['email']."\n";
-            echo 'pw_hash: '.$pw_hash."\n";
-            echo '<script>alert("Logou!")</script>';
+        
             header('Location: ../view/index.php');
-            
-            
+            echo '<script>alert("Logou!")</script>';
             exit();
         } else {
             $error = 'Senha incorreta';

@@ -130,7 +130,7 @@
           <input type="password" name="pw" id="pw-input-login" placeholder="Senha" required>
         </div>
         <div id='div_botao'>
-          <input class="button-27" role="button" type="submit" value="login">
+          <input class="button-27" role="button" type="submit" value="Login">
         </div>
       </form>
     </div>

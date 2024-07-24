@@ -18,14 +18,13 @@ class clienteDao
         if ($pw !== $pw_confirm) {
             $error = 'As senhas não coincidem.';
         } else {
-            // Verificar se o email já está cadastrado
+
             $stmtEmail = $conex->conn->prepare("SELECT * FROM cliente WHERE email = ?");
             $stmtEmail->execute([$email]);
             if ($stmtEmail->fetch()) {
                 $error = 'Email já cadastrado.';
             }
-
-            // Verificar se o CPF já está cadastrado
+            
             $stmtCpf = $conex->conn->prepare("SELECT * FROM cliente WHERE cpf = ?");
             $stmtCpf->execute([$cpf]);
             if ($stmtCpf->fetch()) {
