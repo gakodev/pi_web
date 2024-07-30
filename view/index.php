@@ -43,7 +43,7 @@
       <!--- FORM DE CADASTRO --->
 
       <div id='div_formulario'>
-        
+
         <form id='register-form' method='post' action='../controller/processa.php' onsubmit="return consultaCampos()">
 
           <div class="div-label-input">
@@ -135,6 +135,63 @@
       </form>
     </div>
 
+    <!-- FORM DE CADASTRO DE RESERVA --->
+
+    <div id="card_reserva">
+
+      <form id="form-reserva">
+        <div class="div-label-input">
+          <label for="numConvidados">
+            <img src="svg/people-fill.svg" alt="">
+          </label>
+          <input type="text" name="numConvidados" id="numConvidados-input" placeholder="Numéro de convidados" required>
+        </div>
+
+        <div class="div-label-input">
+          <label for="data">
+            <img src="svg/calendar.svg" alt="">
+          </label>
+          <input type="date" name="data" id="data-input" placeholder="Data da reserva" required>
+        </div>
+
+        <div class="div-label-input">
+          <label for="hora">
+            <img src="svg/clock-fill.svg" alt="">
+          </label>
+          <input type="time" name="hora" id="hora-input" placeholder="Hora">
+        </div>
+
+        <div class="div-label-input">
+          <label for="ambiente">
+            <img src="svg/house-add-fill.svg" alt="">
+          </label>
+          <select name="ambiente" id="ambiente-input" aria-placeholder="Ambiente">
+            <option value="">Ambiente</option>
+            <option value="Restaurante">Interno</option>
+            <option value="Bar">Externo</option>
+          </select>
+        </div>
+
+        <div class="div-label-input">
+          <label for="ocasiao">
+            <img src="svg/balloon-fill.svg" alt="">
+          </label>
+          <select name="ocasiao" id="ocasiao-input" required>
+            <option value="">Ocasião</option>
+            <option value="Aniversário">Aniversário</option>
+            <option value="Jantar-a-dois">Jantar a dois</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="div-label-input">
+          <label for="obs">
+            <img src="svg/pencil-square.svg" alt="">
+          </label>
+          <input type="text" id="obs-input" placeholder="Observações">
+        </div>
+    </div>
+    </form>
   </div>
 
 
@@ -142,20 +199,20 @@
 
 
   </div>
-<div id="div-gallery"> 
-  <ul class="gallery">
-    <li style="background: #f44336;">  </li>
-    <li style="background: #744700;"> <img src="imgs/prato1.jpg" alt=""></li>
-    <li style="background: #ce7e00;"></li>
-    <li style="background: #8fce00;"></li>
-    <li style="background: #2986cc;"></li>
-    <li style="background: #16537e;"></li>
-    <li style="background: #6a329f;"></li>
-    <li style="background: #c90076;"></li>
-    <li style="background: #b4a7d6;"></li>
-    <li style="background: #f28482;"></li>
-  </ul>
-</div>
+  <div id="div-gallery">
+    <ul class="gallery">
+      <li style="background: #f44336;"> </li>
+      <li style="background: #744700;"> <img src="imgs/prato1.jpg" alt=""></li>
+      <li style="background: #ce7e00;"></li>
+      <li style="background: #8fce00;"></li>
+      <li style="background: #2986cc;"></li>
+      <li style="background: #16537e;"></li>
+      <li style="background: #6a329f;"></li>
+      <li style="background: #c90076;"></li>
+      <li style="background: #b4a7d6;"></li>
+      <li style="background: #f28482;"></li>
+    </ul>
+  </div>
   <div id='div-about'>
     <div id='about-text'>
       <h1>Encontrar seu próximo destino nunca foi tão fácil</h1>

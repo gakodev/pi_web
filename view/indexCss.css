@@ -145,6 +145,17 @@ li a:hover:not(.active) {
     color: #FF5400;
 }
 
+#card_reserva {
+    z-index: 6;
+    display: flex;
+    border: solid;
+    width: 800px;
+    background-color: white;
+}
+
+
+
+
 #cabecalho {
 
     display: flex;
