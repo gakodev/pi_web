@@ -190,6 +190,9 @@
           </label>
           <input type="text" id="obs-input" placeholder="Observações">
         </div>
+        <div id='div_botao'>
+          <input class="button-27" role="button" type="submit" value="Reservar!">
+        </div>
     </div>
     </form>
   </div>
@@ -228,7 +231,7 @@
 
   <div class="center">
     <div class="property-card">
-      <a href="#">
+      <a href="#" id="reserva-estabelecimento">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
@@ -245,7 +248,7 @@
     </div>
 
     <div class="property-card">
-      <a href="#">
+      <a href="#" class="reserva-estabelecimento">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/severina.png" alt="Severina">

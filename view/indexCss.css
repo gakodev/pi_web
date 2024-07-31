@@ -148,9 +148,9 @@ li a:hover:not(.active) {
 #card_reserva {
     z-index: 6;
     display: flex;
-    border: solid;
     width: 800px;
     background-color: white;
+    padding: 2.5%;
 }
 
 
