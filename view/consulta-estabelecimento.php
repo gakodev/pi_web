@@ -3,7 +3,6 @@ include_once '../dao/conexao.php';
 $conex = new Conexao();
 $conex->fazConexao();
 
-// Consulta SQL com junção para obter o nome do cliente
 $sql = "SELECT c.nome AS cliente, r.numConvidados, r.data, r.hora, r.ambiente, r.ocasiao, r.obs 
         FROM reserva r 
         JOIN cliente c ON r.FK_idCliente = c.idCliente";
@@ -36,17 +35,16 @@ $result = $conex->conn->query($sql);
     <thead>
         <tr>
             <th>Cliente</th>
-            <th>Numero de convidados</th>
+            <th>Número de convidados</th>
             <th>Data</th>
             <th>Hora</th>
             <th>Ambiente</th>
-            <th>Ocasiao</th>
-            <th>Observacoes</th>
+            <th>Ocasião</th>
+            <th>Observações</th>
         </tr>
     </thead>
     <tbody>
         <?php
-        // Verifica se existem resultados
         if ($result && $result->rowCount() > 0) {
             // Exibe os dados de cada linha
             while($row = $result->fetch(PDO::FETCH_ASSOC)) {

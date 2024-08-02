@@ -23,11 +23,45 @@
     </nav>
   </header>
 
+  <div id="blur">
+  </div>
+
+  <div id='div_central'>
+    <div id="card_login">
+      <div id="cabecalho-login">
+        <h2 class="montserrat">Login</h2>
+        <div id='X'>
+          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+        </div>
+      </div>
+
+      <form id="div-formlogin" method="post" action="../login/login.php">
+        <div class="div-label-input">
+          <label for="email">
+            <img src="svg/envelope.svg" alt="">
+          </label>
+          <input type="text" name="email" id="email-input-login" placeholder="E-mail" required>
+        </div>
+
+        <div class="div-label-input">
+          <label for="pw">
+            <img src="svg/lock.svg" alt="">
+          </label>
+          <input type="password" name="pw" id="pw-input-login" placeholder="Senha" required>
+        </div>
+        <div id='div_botao'>
+          <input class="button-27" role="button" type="submit" value="Login">
+        </div>
+      </form>
+    </div>
+  </div>
+
   <main>
     <div id="div-grid-container" class="grid-container">
       <div id="div-left" class="left">
         <div class="text-title">
-          <h2>Te ajudamos <b class="laranja-reserve">a encontrar</b> <br> seus <b class="laranja-reserve">melhores resultados!</b></h2>
+          <h2>Te ajudamos <b class="laranja-reserve">a encontrar</b> <br> seus <b class="laranja-reserve">melhores
+              resultados!</b></h2>
         </div>
         <div id="div-list">
           <ul id="list">
@@ -50,18 +84,19 @@
             <li class="list-item">
               <img class="icon" src="imgs/restaurante.png" alt="">
               <span>Divulgue! Faça com que sua empresa seja mais vista, <br>
-              por mais pessoas!
-            </span>
+                por mais pessoas!
+              </span>
             </li>
           </ul>
         </div>
         <div id="div-buttons">
-          <button class="button-27" role="button">Entrar</button>
+          <button class="button-27" role="button" id="login">Entrar</button>
           <button class="button-28" role="button"><a href="cadastro-estabelecimento.html">Cadastrar</a></button>
         </div>
       </div>
     </div>
   </main>
+  <script src="js/funcoesEst.js"></script>
 </body>
 
 </html>

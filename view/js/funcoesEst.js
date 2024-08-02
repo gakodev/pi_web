@@ -1,25 +1,22 @@
 var condicao2 = new Boolean(true);
 
-function mostrarDivEst() {
-  console.log(condicao2);
-  if (condicao2 == true) {
-    
-    var div_cadastro = document.getElementById("div_cadastro");
-    div_cadastro.style.display = "flex";
-    var div_formulario = document.getElementById("div_formulario");
-    div_formulario.style.display = "flex";
+function mostrarDiv() {
+  console.log(condicao);
+  if (condicao == true) {
+    var card_login = document.getElementById("card_login");
+    card_login.style.display = "flex";
     var blur = document.getElementById("blur");
     blur.style.display = "flex";
-    
+    var div_central = document.getElementById("div_central");
+    div_central.style.display = "flex";
   } else {
-    
-    div_cadastro = document.getElementById("div_cadastro");
-    div_cadastro.style.display = "none"
-    div_formulario = document.getElementById("div_formulario");
-    div_formulario.style.display = "none";
+    var card_login = document.getElementById("card_login");
+    card_login.style.display = "none";
     var blur = document.getElementById("blur");
     blur.style.display = "none";
+    var div_central = document.getElementById("div_central");
+    div_central.style.display = "none";
   }
 }
-    var botaoEst = document.getElementById("cadastroEst");
-    botaoEst.addEventListener("click", mostrarDivEst);
+    var botaoEst = document.getElementById("login");
+    botaoEst.addEventListener("click", mostrarDiv());

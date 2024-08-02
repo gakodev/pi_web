@@ -23,6 +23,13 @@ body{
     width: 70%;
 }
 
+td, th {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 h2{
     text-align: center;
@@ -67,17 +74,17 @@ h2{
 
 .fl-table thead th {
     color: #ffffff;
-    background: #4FC3A1;
+    background: #FF5400;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
-    background: #324960;
+    background: #FF5400;
 }
 
 .fl-table tr:nth-child(even) {
-    background: #F8F8F8;
+    background: #FF5400;
 }
 
 /* Responsive */
