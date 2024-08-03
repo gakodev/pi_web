@@ -1,73 +1,45 @@
+function esconderTodasAsDivs() {
+  var divs = document.querySelectorAll("#card_cadastro, #card_login, #card_reserva");
+  var blur = document.getElementById("blur");
+  var div_central = document.getElementById("div_central");
 
-var condicao = new Boolean(true);
+  divs.forEach(function(div) {
+      div.style.display = "none";
+  });
 
-function mostrarDiv() {
-  console.log(condicao);
-  if (condicao == true) {
-    var card_cadastro = document.getElementById("card_cadastro");
-    card_cadastro.style.display = "flex";
-    var blur = document.getElementById("blur");
-    blur.style.display = "flex";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "flex";
-  } else {
-    var card_cadastro = document.getElementById("card_cadastro");
-    card_cadastro.style.display = "none";
-    var blur = document.getElementById("blur");
-    blur.style.display = "none";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "none";
-  }
+  if (blur) blur.style.display = "none";
+  if (div_central) div_central.style.display = "none";
 }
 
-function mostrarDivLogin() {
-  console.log(condicao);
-  if (condicao == true) {
-    var card_login = document.getElementById("card_login");
-    card_login.style.display = "flex";
-    var blur = document.getElementById("blur");
-    blur.style.display = "flex";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "flex";
-  } else {
-    var card_login = document.getElementById("card_login");
-    card_login.style.display = "none";
-    var blur = document.getElementById("blur");
-    blur.style.display = "none";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "none";
-  }
+function mostrarDiv(divId) {
+  esconderTodasAsDivs(); // Esconde todas as divs primeiro
+
+  var div = document.getElementById(divId);
+  var blur = document.getElementById("blur");
+  var div_central = document.getElementById("div_central");
+
+  if (div) div.style.display = "flex";
+  if (blur) blur.style.display = "flex";
+  if (div_central) div_central.style.display = "flex";
 }
 
-function mostraDivReserva(){
-  if (condicao == true) {
-    var card_reserva = document.getElementById("card_reserva");
-    card_reserva.style.display = "flex";
-    var blur = document.getElementById("blur");
-    blur.style.display = "flex";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "flex";
-  } else {
-    var card_login = document.getElementById("card_login");
-    card_login.style.display = "none";
-    var blur = document.getElementById("blur");
-    blur.style.display = "none";
-    var div_central = document.getElementById("div_central");
-    div_central.style.display = "none";
-  }
-}
+// Associar funções aos botões
+document.getElementById("cadastro")?.addEventListener("click", function() {
+  mostrarDiv("card_cadastro");
+});
 
-var botao = document.getElementById("cadastro");
-botao.addEventListener("click", mostrarDiv);
+document.getElementById("login")?.addEventListener("click", function() {
+  mostrarDiv("card_login");
+});
 
-var botaoX = document.getElementById("botaoX");
-botaoX.addEventListener("click", mostrarDiv);
+document.getElementById("reserva")?.addEventListener("click", function() {
+  mostrarDiv("card_reserva");
+});
 
-var botaoLogin = document.getElementById("login");
-botaoLogin.addEventListener("click", mostrarDivLogin);
-
-
-
+// Botões de fechar
+document.querySelectorAll("#botaoX").forEach(function(element) {
+  element.addEventListener("click", esconderTodasAsDivs);
+});
 
 function consultaCampos() {
     var submit1 = document.getElementById("nome-input").value;

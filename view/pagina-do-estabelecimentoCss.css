@@ -10,6 +10,12 @@
     color: #ff5400;
 }
 
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
 body {
     background-color: #913102;
 }
@@ -37,6 +43,78 @@ body {
     width: 100%;
     z-index: 5;
     border: solid;
+}
+
+#card_login {
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1vh;
+}
+
+#card_login {
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1vh;
+}
+
+#cabecalho-login {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho-login h2 {
+    color: #FF5400;
+}
+
+.imgX {
+    padding-top: 10%;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.div-label-input {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+label {
+    padding-left: 5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color: #222; }
+  
+  .label-has-error {
+    top: 22%; }
+
+select, input {
+    
+    width: 20vw;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+
 }
 
 .grid-container {

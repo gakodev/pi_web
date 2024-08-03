@@ -28,7 +28,7 @@
             <div class="div-register">
                 <div class="div-form">
                     <h2>Registre-se</h2>
-                    <form method="POST" id="register-form" onsubmit="validaCampos()" >
+                    <form method="POST" action='../controller/processa.php' id="register-form" onsubmit="validaCampos()" >
                         <div class="div-label-input">
                             <label for="categoria">
                                 <img src="svg/bookmark-plus-fill.svg" alt="">
@@ -72,18 +72,20 @@
                             <input type="password" name="pw" id="pw-input" placeholder="Senha">
                         </div>
                         <div class="div-label-input">
-                            <label for="pw">
+                            <label for="pw-confirm">
                                 <img src="svg/lock-fill.svg" alt="">
                             </label>
-                            <input type="password" name="pw" id="pw-confirm-input" placeholder="Confirme sua senha!">
+                            <input type="password" name="pw-confirm" id="pw-confirm-input" placeholder="Confirme sua senha!">
                         </div>
                         <div id="div-checkbox">
                             <input type="checkbox" for="cond">
                             <p>Eu aceito os <a href="">termos de condição e privacidade</a></p>
+                            <input class='entrada' type='hidden' name='id' value='$idEstabelecimento'>
+                            <input class='entrada' type='hidden' name='op' value='cadastrarEstabelecimento'>
                         </div>
                         <div id="div-button">
 
-                            <button class="button-27" role="button">Entrar</button>
+                            <button class="button-27" role="button" type="submit">Entrar</button>
 
 
                         </div>

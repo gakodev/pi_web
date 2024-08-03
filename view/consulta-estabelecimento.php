@@ -3,11 +3,24 @@ include_once '../dao/conexao.php';
 $conex = new Conexao();
 $conex->fazConexao();
 
+$dataFiltro = isset($_GET['dataFiltro']) ? $_GET['dataFiltro'] : '';
+
 $sql = "SELECT c.nome AS cliente, r.numConvidados, r.data, r.hora, r.ambiente, r.ocasiao, r.obs 
         FROM reserva r 
         JOIN cliente c ON r.FK_idCliente = c.idCliente";
 
-$result = $conex->conn->query($sql);
+if (!empty($dataFiltro)) {
+    $sql .= " WHERE r.data = :dataFiltro";
+}
+
+$stmt = $conex->conn->prepare($sql);
+
+if (!empty($dataFiltro)) {
+    $stmt->bindParam(':dataFiltro', $dataFiltro);
+}
+
+$stmt->execute();
+$result = $stmt;
 ?>
 
 <!DOCTYPE html>
@@ -27,45 +40,50 @@ $result = $conex->conn->query($sql);
 
 <body>
     <div id="card-table">
-    <div id="div-title">
-<h2>Suas reservas: </h2>
+        <div id="div-title">
+            <h2>Suas reservas: </h2>
+            <form method="GET" action="">
+                <label id="label-filtro" for="dataFiltro">Filtrar por data:</label>
+                <input class="input-filtro" type="date" id="dataFiltro" name="dataFiltro" value="<?php echo $dataFiltro; ?>">
+                <input id="button-filtro" class="input-filtro" type="submit" value="Filtrar">
+            </form>
+        </div>
+        
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Número de convidados</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Ambiente</th>
+                        <th>Ocasião</th>
+                        <th>Observações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($result && $result->rowCount() > 0) {
+                        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . $row["cliente"] . "</td>";
+                            echo "<td>" . $row["numConvidados"] . "</td>";
+                            echo "<td>" . $row["data"] . "</td>";
+                            echo "<td>" . $row["hora"] . "</td>";
+                            echo "<td>" . $row["ambiente"] . "</td>";
+                            echo "<td>" . $row["ocasiao"] . "</td>";
+                            echo "<td>" . $row["obs"] . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='7'>Nenhum resultado encontrado</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-<div class="table-wrapper">
-    <table class="fl-table">
-    <thead>
-        <tr>
-            <th>Cliente</th>
-            <th>Número de convidados</th>
-            <th>Data</th>
-            <th>Hora</th>
-            <th>Ambiente</th>
-            <th>Ocasião</th>
-            <th>Observações</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        if ($result && $result->rowCount() > 0) {
-            // Exibe os dados de cada linha
-            while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo "<tr>";
-                echo "<td>" . $row["cliente"] . "</td>";
-                echo "<td>" . $row["numConvidados"] . "</td>";
-                echo "<td>" . $row["data"] . "</td>";
-                echo "<td>" . $row["hora"] . "</td>";
-                echo "<td>" . $row["ambiente"] . "</td>";
-                echo "<td>" . $row["ocasiao"] . "</td>";
-                echo "<td>" . $row["obs"] . "</td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='7'>Nenhum resultado encontrado</td></tr>";
-        }
-        ?>
-        </tbody>
-    </table>
-</div>
-</div>
 </body>
 
 </html>

@@ -31,7 +31,7 @@
       <div id="cabecalho-login">
         <h2 class="montserrat">Login</h2>
         <div id='X'>
-          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+          <a id='botaoX' href='pagina-do-estabelecimento.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
         </div>
       </div>
 
@@ -91,7 +91,7 @@
         </div>
         <div id="div-buttons">
           <button class="button-27" role="button" id="login">Entrar</button>
-          <button class="button-28" role="button"><a href="cadastro-estabelecimento.html">Cadastrar</a></button>
+          <button class="button-28" role="button"><a href="cadastro-estabelecimento.php">Cadastrar</a></button>
         </div>
       </div>
     </div>

@@ -5,8 +5,9 @@
 }
 body{
     -webkit-font-smoothing: antialiased;
-    background: rgba( 71, 147, 227, 1);
+    background: #913102;
 }
+
 
 #card-table {
     margin: 5%;
@@ -15,12 +16,22 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+    border-radius: 1vh;
 }
 
 #div-title {
     display: flex;
     justify-content: left;
+    align-items: center;
+    justify-content: space-between;
     width: 70%;
+}
+
+#label-filtro, .input-filtro {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 td, th {
@@ -84,7 +95,7 @@ h2{
 }
 
 .fl-table tr:nth-child(even) {
-    background: #FF5400;
+    background: white;
 }
 
 /* Responsive */

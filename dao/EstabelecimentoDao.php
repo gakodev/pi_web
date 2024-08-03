@@ -11,38 +11,39 @@ class EstabelecimentoDao
         include_once 'conexao.php';
         $conex = new Conexao();
         $conex->fazConexao();
-
+    
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $cnpj = $_POST['cnpj'];
             $pw = $_POST['pw'];
             $pw_confirm = $_POST['pw-confirm'];
-
+    
             if ($pw !== $pw_confirm) {
                 $error = 'As senhas não coincidem.';
             } else {
-                
-                $stmtCnpj = $conex->conn->prepare("SELECT * FROM estabelecimento WHERE email = ?");
-                $stmtCnpj->execute([$email]);
+                // Verifica se o CNPJ já está cadastrado
+                $stmtCnpj = $conex->conn->prepare("SELECT * FROM estabelecimento WHERE cnpj = ?");
+                $stmtCnpj->execute([$cnpj]);
                 if ($stmtCnpj->fetch()) {
-                    $error = 'Email já cadastrado.';
+                    $error = 'CNPJ já cadastrado.';
                 }
-
+    
                 if (!isset($error)) {
+                    // Criptografa a senha antes de armazená-la no banco de dados
                     $hashed_pw = password_hash($pw, PASSWORD_BCRYPT);
                     $sql = "INSERT INTO estabelecimento (pw, categoria, nomeFantasia, cnpj, contato, endereco)
                             VALUES (:pw, :categoria, :nomeFantasia, :cnpj, :contato, :endereco)";
-
-                    $stmt = $conex->conn->prepare($sql);
-                    $stmt->bindValue(':pw', $hashed_pw);
-                    $stmt->bindValue(':categoria', $estabelecimento->getCategoria());
-                    $stmt->bindValue(':nomeFantasia', $estabelecimento->getNomeFantasia());
-                    $stmt->bindValue(':cnpj', $estabelecimento->getCnpj());
-                    $stmt->bindValue(':contato', $estabelecimento->getContato());
-                    $stmt->bindValue(':endereco', $estabelecimento->getEndereco());
-
+    
+                    $stmtInsert = $conex->conn->prepare($sql);
+                    $stmtInsert->bindValue(':pw', $hashed_pw);
+                    $stmtInsert->bindValue(':categoria', $estabelecimento->getCategoria());
+                    $stmtInsert->bindValue(':nomeFantasia', $estabelecimento->getNomeFantasia());
+                    $stmtInsert->bindValue(':cnpj', $estabelecimento->getCnpj());
+                    $stmtInsert->bindValue(':contato', $estabelecimento->getContato());
+                    $stmtInsert->bindValue(':endereco', $estabelecimento->getEndereco());
+    
                     if ($stmtInsert->execute()) {
                         echo '<script>alert("Cadastro realizado!")</script>';
-                        echo '<script>location.href="../controller/processa.php?op=listarCliente"</script>';
+                        echo '<script>location.href="../controller/processa.php?op=listarEstabelecimento"</script>';
                         return;
                     } else {
                         $error = 'Erro ao registrar o usuário.';
@@ -50,12 +51,11 @@ class EstabelecimentoDao
                 }
             }
         }
-
+    
         if (isset($error)) {
             echo '<script>alert("' . $error . '")</script>';
             echo '<script>location.href="../view/index.php"</script>';
         }
-
     }
 
     public function listarEstabelecimento()
