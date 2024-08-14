@@ -139,6 +139,15 @@
 
     <div id="card_reserva">
 
+    <div id='cabecalho'>
+        <div id='div-form-reserva-title'>
+          <h2 class="montserrat">Registre-se</h2>
+        </div>
+        <div id='X'>
+          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+        </div>
+      </div>
+
       <form id="form-reserva">
         <div class="div-label-input">
           <label for="numConvidados">
@@ -231,7 +240,7 @@
 
   <div class="center">
     <div class="property-card">
-      <a href="#" id="reserva-estabelecimento">
+      <a href="" class="mostrar-reserva">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
@@ -248,7 +257,7 @@
     </div>
 
     <div class="property-card">
-      <a href="#" class="reserva-estabelecimento">
+      <a href="" class="mostrar-reserva">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/severina.png" alt="Severina">
@@ -265,7 +274,7 @@
     </div>
 
     <div class="property-card">
-      <a href="#">
+      <a href="" class="mostrar-reserva">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/wills.png" alt="Wills">
@@ -283,7 +292,7 @@
 
 
     <div class="property-card">
-      <a href="#">
+      <a href="" class="mostrar-reserva">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/20barra9.png" alt="20/9">
@@ -300,7 +309,7 @@
     </div>
 
     <div class="property-card">
-      <a href="#">
+      <a href="" class="mostrar-reserva">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
@@ -316,124 +325,7 @@
       </div>
     </div>
 
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
 
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
-
-    <div class="property-card">
-      <a href="#">
-        <div class="property-image">
-          <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
-          </div>
-        </div>
-      </a>
-      <div class="property-description">
-        <h5>Canto Bar</h5>
-        <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-      </div>
-    </div>
   </div>
 
   <footer>

@@ -23,16 +23,11 @@ function mostrarDiv(divId) {
   if (div_central) div_central.style.display = "flex";
 }
 
-document.getElementById("cadastro")?.addEventListener("click", function() {
-  mostrarDiv("card_cadastro");
-});
-
-document.getElementById("login")?.addEventListener("click", function() {
-  mostrarDiv("card_login");
-});
-
-document.getElementById("reserva")?.addEventListener("click", function() {
-  mostrarDiv("card_reserva");
+document.querySelectorAll(".mostrar-reserva").forEach(function(element) {
+  element.addEventListener("click", function(event) {
+      event.preventDefault(); // Previne o comportamento padrão do link
+      mostrarDiv("card_reserva");
+  });
 });
 
 document.querySelectorAll("#botaoX").forEach(function(element) {
