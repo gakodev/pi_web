@@ -3,8 +3,6 @@
 class EstabelecimentoDao
 {
 
-
-
     public function cadastrarEstabelecimento(Estabelecimento $estabelecimento)
     {
         session_start();
@@ -20,7 +18,6 @@ class EstabelecimentoDao
             if ($pw !== $pw_confirm) {
                 $error = 'As senhas não coincidem.';
             } else {
-                // Verifica se o CNPJ já está cadastrado
                 $stmtCnpj = $conex->conn->prepare("SELECT * FROM estabelecimento WHERE cnpj = ?");
                 $stmtCnpj->execute([$cnpj]);
                 if ($stmtCnpj->fetch()) {
@@ -28,7 +25,6 @@ class EstabelecimentoDao
                 }
     
                 if (!isset($error)) {
-                    // Criptografa a senha antes de armazená-la no banco de dados
                     $hashed_pw = password_hash($pw, PASSWORD_BCRYPT);
                     $sql = "INSERT INTO estabelecimento (pw, categoria, nomeFantasia, cnpj, contato, endereco)
                             VALUES (:pw, :categoria, :nomeFantasia, :cnpj, :contato, :endereco)";
@@ -54,7 +50,7 @@ class EstabelecimentoDao
     
         if (isset($error)) {
             echo '<script>alert("' . $error . '")</script>';
-            echo '<script>location.href="../view/index.php"</script>';
+            echo '<script>location.href="../view/pagina-do-estabelecimento.php"</script>';
         }
     }
 

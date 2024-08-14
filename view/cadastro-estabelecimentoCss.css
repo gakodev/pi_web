@@ -27,7 +27,7 @@ main {
 }
 
 body {
-    background-color: #FF5400;
+    background-color: #913102;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +41,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: row;
+    border-radius: 2vh;
 }
 
 #register-form {
@@ -65,6 +66,7 @@ body {
         font-optical-sizing: auto;
         font-weight: 800;
         font-style: normal;
+        color: #FF5400;
     }
 
 

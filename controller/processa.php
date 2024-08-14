@@ -101,7 +101,7 @@ function excluirEstabelecimento (){
     $cntrl->excluirEstabelecimento($idEstabelecimento);
 }
 function listarEstabelecimento () {
-    include '../view/listarClientes.php';
+    echo '<script>location.href="../view/pagina-do-estabelecimento.php"</script>';
 }
 
     // funções da reserva;

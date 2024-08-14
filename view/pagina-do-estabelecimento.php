@@ -19,6 +19,7 @@
       <img src='imgs/logonobg_laranja.png' alt=''>
       <ul id="ul_header">
         <li><a id="nosso-site" href="#">Nosso site</a></li>
+        <li><a id="nosso-site" href="consulta-estabelecimento.php">Meu painel</a></li>
       </ul>
     </nav>
   </header>
@@ -35,12 +36,12 @@
         </div>
       </div>
 
-      <form id="div-formlogin" method="post" action="../login/login.php">
+      <form id="div-formlogin" method="post" action="../login/loginEst.php">
         <div class="div-label-input">
-          <label for="email">
+          <label for="cnpj">
             <img src="svg/envelope.svg" alt="">
           </label>
-          <input type="text" name="email" id="email-input-login" placeholder="E-mail" required>
+          <input type="text" name="cnpj" id="cnpj-input-login" placeholder="CNPJ" required>
         </div>
 
         <div class="div-label-input">

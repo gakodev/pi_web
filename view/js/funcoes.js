@@ -12,7 +12,7 @@ function esconderTodasAsDivs() {
 }
 
 function mostrarDiv(divId) {
-  esconderTodasAsDivs(); // Esconde todas as divs primeiro
+  esconderTodasAsDivs();
 
   var div = document.getElementById(divId);
   var blur = document.getElementById("blur");
@@ -23,7 +23,6 @@ function mostrarDiv(divId) {
   if (div_central) div_central.style.display = "flex";
 }
 
-// Associar funções aos botões
 document.getElementById("cadastro")?.addEventListener("click", function() {
   mostrarDiv("card_cadastro");
 });
@@ -36,7 +35,6 @@ document.getElementById("reserva")?.addEventListener("click", function() {
   mostrarDiv("card_reserva");
 });
 
-// Botões de fechar
 document.querySelectorAll("#botaoX").forEach(function(element) {
   element.addEventListener("click", esconderTodasAsDivs);
 });
