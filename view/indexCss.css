@@ -105,7 +105,6 @@ li a:hover:not(.active) {
     height: 100vh;
     width: 100%;
     z-index: 5;
-    border: solid;
 }
 
 #card_cadastro {

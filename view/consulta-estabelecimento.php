@@ -11,22 +11,22 @@ $conex = new Conexao();
 $conex->fazConexao();
 
 $idEstabelecimento = $_SESSION['idEstabelecimento'];
-$dataFiltro = isset($_GET['dataFiltro']) ? $_GET['dataFiltro'] : '';
+$dataReservaFiltro = isset($_GET['dataReservaFiltro']) ? $_GET['dataReservaFiltro'] : '';
 
-$sql = "SELECT c.nome AS cliente, r.numConvidados, r.data, r.hora, r.ambiente, r.ocasiao, r.obs 
+$sql = "SELECT c.nome AS cliente, r.numConvidados, r.dataReserva, r.hora, r.ambiente, r.ocasiao, r.obs 
         FROM reserva r 
         JOIN cliente c ON r.FK_idCliente = c.idCliente
         WHERE r.FK_idEstabelecimento = :idEstabelecimento";
 
-if (!empty($dataFiltro)) {
-    $sql .= " AND r.data = :dataFiltro";
+if (!empty($dataReservaFiltro)) {
+    $sql .= " AND r.dataReserva = :dataReservaFiltro";
 }
 
 $stmt = $conex->conn->prepare($sql);
 $stmt->bindParam(':idEstabelecimento', $idEstabelecimento);
 
-if (!empty($dataFiltro)) {
-    $stmt->bindParam(':dataFiltro', $dataFiltro);
+if (!empty($dataReservaFiltro)) {
+    $stmt->bindParam(':dataReservaFiltro', $dataReservaFiltro);
 }
 
 $stmt->execute();
@@ -61,8 +61,8 @@ $result = $stmt;
         <div id="div-title">
             <h2>Suas reservas: </h2>
             <form method="GET" action="">
-                <label id="label-filtro" for="dataFiltro">Filtrar por data:</label>
-                <input class="input-filtro" type="date" id="dataFiltro" name="dataFiltro" value="<?php echo htmlspecialchars($dataFiltro); ?>">
+                <label id="label-filtro" for="dataReservaFiltro">Filtrar por dataReserva:</label>
+                <input class="input-filtro" type="date" id="dataReservaFiltro" name="dataReservaFiltro" value="<?php echo htmlspecialchars($dataReservaFiltro); ?>">
                 <input id="button-filtro" class="input-filtro" type="submit" value="Filtrar">
             </form>
         </div>
@@ -73,7 +73,7 @@ $result = $stmt;
                     <tr>
                         <th>Cliente</th>
                         <th>Número de convidados</th>
-                        <th>Data</th>
+                        <th>dataReserva</th>
                         <th>Hora</th>
                         <th>Ambiente</th>
                         <th>Ocasião</th>
@@ -87,7 +87,7 @@ $result = $stmt;
                             echo "<tr>";
                             echo "<td>" . htmlspecialchars($row["cliente"]) . "</td>";
                             echo "<td>" . htmlspecialchars($row["numConvidados"]) . "</td>";
-                            echo "<td>" . htmlspecialchars($row["data"]) . "</td>";
+                            echo "<td>" . htmlspecialchars($row["dataReserva"]) . "</td>";
                             echo "<td>" . htmlspecialchars($row["hora"]) . "</td>";
                             echo "<td>" . htmlspecialchars($row["ambiente"]) . "</td>";
                             echo "<td>" . htmlspecialchars($row["ocasiao"]) . "</td>";

@@ -14,7 +14,7 @@
         $stmt->bindValue(':FK_idCliente', $reserva->getFKIdCliente());
         $stmt->bindValue(':FK_idEstabelecimento', $reserva->getFKIdEstabelecimento());
         $stmt->bindValue(':numConvidados', $reserva->getNumConvidados() );
-        $stmt->bindValue(':dataReserva', $reserva->getDataReserva());
+        $stmt->bindValue(':dataReserva', $reserva->getdataReserva());
         $stmt->bindValue(':hora', $reserva->getHora());
         $stmt->bindValue(':ambiente', $reserva->getAmbiente());
         $stmt->bindValue(':ocasiao', $reserva->getOcasiao());
@@ -63,7 +63,7 @@
         $stmt->bindValue(':FK_idCliente', $reserva->getFKIdCliente());
         $stmt->bindValue(':FK_estabelicimento', $reserva->getFKIdEstabelecimento());
         $stmt->bindValue(':numConvidados', $reserva->getNumConvidados() );
-        $stmt->bindValue(':dataReserva', $reserva->getDataReserva());
+        $stmt->bindValue(':dataReserva', $reserva->getdataReserva());
         $stmt->bindValue(':hora', $reserva->getHora());
         $stmt->bindValue(':ambiente', $reserva->getAmbiente());
         $stmt->bindValue(':ocasiao', $reserva->getOcasiao());

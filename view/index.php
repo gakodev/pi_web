@@ -5,8 +5,11 @@ session_start();
 $isLoggedIn = isset($_SESSION['idCliente']);
 $loginError = isset($_SESSION['login_error']) ? $_SESSION['login_error'] : null;
 if ($loginError) {
-    unset($_SESSION['login_error']); // Limpa a mensagem de erro após ser exibida
+    unset($_SESSION['login_error']);
 }
+
+// Verifica se a chave 'idCliente' está definida antes de acessá-la
+$idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,10 +33,8 @@ if ($loginError) {
       <ul id="ul_header">
         <li><a href="pagina-do-estabelecimento.php">Seja nosso parceiro!</a></li>
         <?php if ($isLoggedIn): ?>
-          <!-- Exibe o link de Logout quando o usuário está logado -->
           <li><a id="logout" href="../login/logout.php">Logout</a></li>
         <?php else: ?>
-          <!-- Exibe os links de Cadastro e Login quando o usuário não está logado -->
           <li><a id="cadastro" class="mostrar-cadastro" href="#">Cadastrar</a></li>
           <li><a id="login" class="mostrar-login" href="#">Entrar</a></li>
         <?php endif; ?>
@@ -80,7 +81,7 @@ if ($loginError) {
             <label for="dataNascimento">
               <img src="svg/calendar.svg" alt="">
             </label>
-            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="Data de nascimento"
+            <input type="text" name="dataNascimento" id="dataNascimento-input" placeholder="dataReserva de nascimento"
               maxlength="10">
           </div>
 
@@ -152,70 +153,73 @@ if ($loginError) {
     </div>
 
      <!-- Formulário de Reserva (visível apenas para usuários logados) -->
-     <?php if ($isLoggedIn): ?>
-      <div id="card_reserva">
-        <div id='cabecalho'>
-          <div id='div-form-reserva-title'>
-            <h2 class="montserrat">Reserva</h2>
-          </div>
-          <div id='X'>
-            <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
-          </div>
-        </div>
-
-        <form id="form-reserva" method="post" action="../controller/processa_reserva.php">
-          <div class="div-label-input">
-            <label for="numConvidados">
-              <img src="svg/people-fill.svg" alt="">
-            </label>
-            <input type="text" name="numConvidados" id="numConvidados-input" placeholder="Número de convidados" required>
-          </div>
-          <div class="div-label-input">
-            <label for="data">
-              <img src="svg/calendar.svg" alt="">
-            </label>
-            <input type="date" name="data" id="data-input" placeholder="Data da reserva" required>
-          </div>
-          <div class="div-label-input">
-            <label for="hora">
-              <img src="svg/clock-fill.svg" alt="">
-            </label>
-            <input type="time" name="hora" id="hora-input" placeholder="Hora">
-          </div>
-          <div class="div-label-input">
-            <label for="ambiente">
-              <img src="svg/house-add-fill.svg" alt="">
-            </label>
-            <select name="ambiente" id="ambiente-input" aria-placeholder="Ambiente">
-              <option value="">Ambiente</option>
-              <option value="Restaurante">Interno</option>
-              <option value="Bar">Externo</option>
-            </select>
-          </div>
-          <div class="div-label-input">
-            <label for="ocasiao">
-              <img src="svg/balloon-fill.svg" alt="">
-            </label>
-            <select name="ocasiao" id="ocasiao-input" required>
-              <option value="">Ocasião</option>
-              <option value="Aniversário">Aniversário</option>
-              <option value="Jantar-a-dois">Jantar a dois</option>
-              <option value="Outro">Outro</option>
-            </select>
-          </div>
-          <div class="div-label-input">
-            <label for="obs">
-              <img src="svg/pencil-square.svg" alt="">
-            </label>
-            <input type="text" id="obs-input" placeholder="Observações">
-          </div>
-          <div id='div_botao'>
-            <input class="button-27" role="button" type="submit" value="Reservar!">
-          </div>
-        </form>
+<?php if ($isLoggedIn): ?>
+  <div id="card_reserva" style="display: none;">
+    <div id='cabecalho'>
+      <div id='div-form-reserva-title'>
+        <h2 class="montserrat">Reserva</h2>
       </div>
-    <?php endif; ?>
+      <div id='X'>
+        <a id='botaoX' href='#' onclick="esconderFormulario(); return false;"><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+      </div>
+    </div>
+
+    <form id="form-reserva" method="post" action="../controller/processa.php">
+      <div class="div-label-input">
+        <label for="numConvidados">
+          <img src="svg/people-fill.svg" alt="">
+        </label>
+        <input type="text" name="numConvidados" id="numConvidados-input" placeholder="Número de convidados" required>
+      </div>
+      <div class="div-label-input">
+        <label for="dataReserva">
+          <img src="svg/calendar.svg" alt="">
+        </label>
+        <input type="date" name="dataReserva" id="dataReserva-input" placeholder="Data da reserva" required>
+      </div>
+      <div class="div-label-input">
+        <label for="hora">
+          <img src="svg/clock-fill.svg" alt="">
+        </label>
+        <input type="time" name="hora" id="hora-input" placeholder="Hora">
+      </div>
+      <div class="div-label-input">
+        <label for="ambiente">
+          <img src="svg/house-add-fill.svg" alt="">
+        </label>
+        <select name="ambiente" id="ambiente-input" aria-placeholder="Ambiente">
+          <option value="">Ambiente</option>
+          <option value="Restaurante">Interno</option>
+          <option value="Bar">Externo</option>
+        </select>
+      </div>
+      <div class="div-label-input">
+        <label for="ocasiao">
+          <img src="svg/balloon-fill.svg" alt="">
+        </label>
+        <select name="ocasiao" id="ocasiao-input" required>
+          <option value="">Ocasião</option>
+          <option value="Aniversário">Aniversário</option>
+          <option value="Jantar-a-dois">Jantar a dois</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+      <div class="div-label-input">
+        <label for="obs">
+          <img src="svg/pencil-square.svg" alt="">
+        </label>
+        <input name="obs" type="text" id="obs-input" placeholder="Observações">
+      </div>
+      <input class='entrada' type='hidden' name='id' value='$idReserva'>
+      <input class='entrada' type='hidden' name='op' value='cadastrarReserva'>
+      <input type="hidden" name="FK_idCliente" value="<?php echo htmlspecialchars($idCliente); ?>">
+      <input type="hidden" id="FK_idEstabelecimento" name="FK_idEstabelecimento" value="">
+      <div id='div_botao'>
+        <input class="button-27" role="button" type="submit" value="Reservar!">
+      </div>
+    </form>
   </div>
+<?php endif; ?>
 
 
 
@@ -250,65 +254,64 @@ if ($loginError) {
 
 
   <div class="center">
+    <!-- Card 1 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="1">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
       <div class="property-description">
-        <h5> Fuga Bar - Cais Embarcadero </h5>
+        <h5>Fuga Bar - Cais Embarcadero</h5>
         <br>
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>
     </div>
 
+    <!-- Card 2 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="2">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/severina.png" alt="Severina">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
       <div class="property-description">
-        <h5> Severina </h5>
+        <h5>Severina</h5>
         <br>
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>
     </div>
 
+    <!-- Card 3 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="3">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/wills.png" alt="Wills">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
       <div class="property-description">
-        <h5> Wills Bar </h5>
+        <h5>Wills Bar</h5>
         <br>
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>
     </div>
 
-
+    <!-- Card 4 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="4">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/20barra9.png" alt="20/9">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
@@ -319,13 +322,13 @@ if ($loginError) {
       </div>
     </div>
 
+    <!-- Card 5 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="5">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
@@ -336,13 +339,13 @@ if ($loginError) {
       </div>
     </div>
 
+    <!-- Card 6 -->
     <div class="property-card">
-      <a href="" class="mostrar-reserva">
+      <a href="#" class="mostrar-reserva" data-id="6">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
-            <div class="property-image-title">
-            </div>
+            <div class="property-image-title"></div>
           </div>
         </div>
       </a>
@@ -352,6 +355,31 @@ if ($loginError) {
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>
     </div>
+</div>
+
+<script>
+    function mostrarFormulario() {
+        document.getElementById('card_reserva').style.display = 'block';
+    }
+
+    function esconderFormulario() {
+        document.getElementById('card_reserva').style.display = 'none';
+    }
+
+    document.querySelectorAll('.mostrar-reserva').forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            const estabelecimentoId = this.getAttribute('data-id');
+            
+            // Atualiza o campo oculto do formulário com o ID do estabelecimento
+            document.getElementById('FK_idEstabelecimento').value = estabelecimentoId;
+            
+            // Exibe o formulário de reserva
+            mostrarFormulario();
+        });
+    });
+</script>
+</div>
 
 
 

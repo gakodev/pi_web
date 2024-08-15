@@ -19,7 +19,7 @@
     $this->FK_idCliente = $FK_idCliente;
     $this->FK_idEstabelecimento = $FK_idEstabelecimento;
     $this->numConvidados = $numConvidados;
-    $this->datareserva = $dataReserva;
+    $this->dataReserva = $dataReserva;
     $this->hora = $hora;
     $this->ambiente = $ambiente;
     $this->ocasiao = $ocasiao;
@@ -43,7 +43,7 @@
         return $this->numConvidados;
     }
 
-    public function getDataReserva() {
+    public function getdataReserva() {
         return $this->dataReserva;
     }
 
@@ -80,8 +80,8 @@
         $this->numConvidados = $numConvidados;
     }
 
-    public function setDataReserva($dataReserva) {
-        $this->datareserva = $dataReserva;
+    public function setdataReserva($dataReserva) {
+        $this->dataReserva = $dataReserva;
     }
 
     public function setHora($hora) {
