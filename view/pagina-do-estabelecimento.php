@@ -18,7 +18,6 @@
     <nav>
       <img src='imgs/logonobg_laranja.png' alt=''>
       <ul id="ul_header">
-        <li><a id="nosso-site" href="#">Nosso site</a></li>
         <li><a id="nosso-site" href="consulta-estabelecimento.php">Meu painel</a></li>
       </ul>
     </nav>

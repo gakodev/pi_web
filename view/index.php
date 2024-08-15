@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Verifica se o usuário está logado
+$isLoggedIn = isset($_SESSION['idCliente']);
+$loginError = isset($_SESSION['login_error']) ? $_SESSION['login_error'] : null;
+if ($loginError) {
+    unset($_SESSION['login_error']); // Limpa a mensagem de erro após ser exibida
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +29,14 @@
       <img src='imgs/logonobg.png' alt=''>
       <ul id="ul_header">
         <li><a href="pagina-do-estabelecimento.php">Seja nosso parceiro!</a></li>
-        <li><a id="cadastro" href="#">Cadastrar</a></li>
-        <li><a id="login" href="#">Entrar</a></li>
+        <?php if ($isLoggedIn): ?>
+          <!-- Exibe o link de Logout quando o usuário está logado -->
+          <li><a id="logout" href="../login/logout.php">Logout</a></li>
+        <?php else: ?>
+          <!-- Exibe os links de Cadastro e Login quando o usuário não está logado -->
+          <li><a id="cadastro" class="mostrar-cadastro" href="#">Cadastrar</a></li>
+          <li><a id="login" class="mostrar-login" href="#">Entrar</a></li>
+        <?php endif; ?>
       </ul>
     </div>
   </header>
@@ -135,75 +151,70 @@
       </form>
     </div>
 
-    <!-- FORM DE CADASTRO DE RESERVA --->
-
-    <div id="card_reserva">
-
-    <div id='cabecalho'>
-        <div id='div-form-reserva-title'>
-          <h2 class="montserrat">Registre-se</h2>
+     <!-- Formulário de Reserva (visível apenas para usuários logados) -->
+     <?php if ($isLoggedIn): ?>
+      <div id="card_reserva">
+        <div id='cabecalho'>
+          <div id='div-form-reserva-title'>
+            <h2 class="montserrat">Reserva</h2>
+          </div>
+          <div id='X'>
+            <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
+          </div>
         </div>
-        <div id='X'>
-          <a id='botaoX' href='index.php'><img class='imgX' src='svg/x-circle.svg' alt=''></a>
-        </div>
+
+        <form id="form-reserva" method="post" action="../controller/processa_reserva.php">
+          <div class="div-label-input">
+            <label for="numConvidados">
+              <img src="svg/people-fill.svg" alt="">
+            </label>
+            <input type="text" name="numConvidados" id="numConvidados-input" placeholder="Número de convidados" required>
+          </div>
+          <div class="div-label-input">
+            <label for="data">
+              <img src="svg/calendar.svg" alt="">
+            </label>
+            <input type="date" name="data" id="data-input" placeholder="Data da reserva" required>
+          </div>
+          <div class="div-label-input">
+            <label for="hora">
+              <img src="svg/clock-fill.svg" alt="">
+            </label>
+            <input type="time" name="hora" id="hora-input" placeholder="Hora">
+          </div>
+          <div class="div-label-input">
+            <label for="ambiente">
+              <img src="svg/house-add-fill.svg" alt="">
+            </label>
+            <select name="ambiente" id="ambiente-input" aria-placeholder="Ambiente">
+              <option value="">Ambiente</option>
+              <option value="Restaurante">Interno</option>
+              <option value="Bar">Externo</option>
+            </select>
+          </div>
+          <div class="div-label-input">
+            <label for="ocasiao">
+              <img src="svg/balloon-fill.svg" alt="">
+            </label>
+            <select name="ocasiao" id="ocasiao-input" required>
+              <option value="">Ocasião</option>
+              <option value="Aniversário">Aniversário</option>
+              <option value="Jantar-a-dois">Jantar a dois</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="div-label-input">
+            <label for="obs">
+              <img src="svg/pencil-square.svg" alt="">
+            </label>
+            <input type="text" id="obs-input" placeholder="Observações">
+          </div>
+          <div id='div_botao'>
+            <input class="button-27" role="button" type="submit" value="Reservar!">
+          </div>
+        </form>
       </div>
-
-      <form id="form-reserva">
-        <div class="div-label-input">
-          <label for="numConvidados">
-            <img src="svg/people-fill.svg" alt="">
-          </label>
-          <input type="text" name="numConvidados" id="numConvidados-input" placeholder="Numéro de convidados" required>
-        </div>
-
-        <div class="div-label-input">
-          <label for="data">
-            <img src="svg/calendar.svg" alt="">
-          </label>
-          <input type="date" name="data" id="data-input" placeholder="Data da reserva" required>
-        </div>
-
-        <div class="div-label-input">
-          <label for="hora">
-            <img src="svg/clock-fill.svg" alt="">
-          </label>
-          <input type="time" name="hora" id="hora-input" placeholder="Hora">
-        </div>
-
-        <div class="div-label-input">
-          <label for="ambiente">
-            <img src="svg/house-add-fill.svg" alt="">
-          </label>
-          <select name="ambiente" id="ambiente-input" aria-placeholder="Ambiente">
-            <option value="">Ambiente</option>
-            <option value="Restaurante">Interno</option>
-            <option value="Bar">Externo</option>
-          </select>
-        </div>
-
-        <div class="div-label-input">
-          <label for="ocasiao">
-            <img src="svg/balloon-fill.svg" alt="">
-          </label>
-          <select name="ocasiao" id="ocasiao-input" required>
-            <option value="">Ocasião</option>
-            <option value="Aniversário">Aniversário</option>
-            <option value="Jantar-a-dois">Jantar a dois</option>
-            <option value="Outro">Outro</option>
-          </select>
-        </div>
-
-        <div class="div-label-input">
-          <label for="obs">
-            <img src="svg/pencil-square.svg" alt="">
-          </label>
-          <input type="text" id="obs-input" placeholder="Observações">
-        </div>
-        <div id='div_botao'>
-          <input class="button-27" role="button" type="submit" value="Reservar!">
-        </div>
-    </div>
-    </form>
+    <?php endif; ?>
   </div>
 
 
@@ -324,6 +335,24 @@
         <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
       </div>
     </div>
+
+    <div class="property-card">
+      <a href="" class="mostrar-reserva">
+        <div class="property-image">
+          <div class='card-img'>
+            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <div class="property-image-title">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="property-description">
+        <h5>Canto Bar</h5>
+        <br>
+        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+      </div>
+    </div>
+
 
 
   </div>

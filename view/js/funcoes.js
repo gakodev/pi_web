@@ -18,21 +18,49 @@ function mostrarDiv(divId) {
   var blur = document.getElementById("blur");
   var div_central = document.getElementById("div_central");
 
-  if (div) div.style.display = "flex";
+  if (div) {
+      div.style.display = "flex";
+      console.log("Div exibida:", divId);
+  } else {
+      console.log("Erro: Div não encontrada:", divId);
+  }
+
   if (blur) blur.style.display = "flex";
   if (div_central) div_central.style.display = "flex";
 }
 
-document.querySelectorAll(".mostrar-reserva").forEach(function(element) {
-  element.addEventListener("click", function(event) {
-      event.preventDefault(); // Previne o comportamento padrão do link
-      mostrarDiv("card_reserva");
-  });
-});
+function adicionarEventosDeClique() {
 
-document.querySelectorAll("#botaoX").forEach(function(element) {
-  element.addEventListener("click", esconderTodasAsDivs);
-});
+  var loginTriggers = document.querySelectorAll(".mostrar-login");
+  var cadastroTriggers = document.querySelectorAll(".mostrar-cadastro");
+  var reservaTriggers = document.querySelectorAll(".mostrar-reserva");
+
+  loginTriggers.forEach(function(element) {
+      element.addEventListener("click", function(event) {
+          event.preventDefault();
+          mostrarDiv("card_login");
+      });
+  });
+
+  cadastroTriggers.forEach(function(element) {
+      element.addEventListener("click", function(event) {
+          event.preventDefault();
+          mostrarDiv("card_cadastro");
+      });
+  });
+
+  reservaTriggers.forEach(function(element) {
+      element.addEventListener("click", function(event) {
+          event.preventDefault();
+          mostrarDiv("card_reserva");
+      });
+  });
+
+  document.querySelectorAll("#botaoX").forEach(function(element) {
+      element.addEventListener("click", esconderTodasAsDivs);
+  });
+}
+document.addEventListener("DOMContentLoaded", adicionarEventosDeClique);
 
 function consultaCampos() {
     var submit1 = document.getElementById("nome-input").value;
