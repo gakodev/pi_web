@@ -66,12 +66,23 @@ li {
     border-radius: 1vh;
 }
 
+#div-sair{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#div-title a img {
+    width: 200%;
+}
+
 #div-title {
     display: flex;
     justify-content: left;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 50%;
 }
 
 #label-filtro, .input-filtro {

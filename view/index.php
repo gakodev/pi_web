@@ -228,16 +228,14 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
   </div>
   <div id="div-gallery">
     <ul class="gallery">
-      <li style="background: #f44336;"> </li>
       <li style="background: #744700;"> <img src="imgs/prato1.jpg" alt=""></li>
-      <li style="background: #ce7e00;"></li>
-      <li style="background: #8fce00;"></li>
-      <li style="background: #2986cc;"></li>
-      <li style="background: #16537e;"></li>
-      <li style="background: #6a329f;"></li>
-      <li style="background: #c90076;"></li>
-      <li style="background: #b4a7d6;"></li>
-      <li style="background: #f28482;"></li>
+      <li style="background: #ce7e00;"> <img src="imgs/sirene-foto.jpg" alt=""></li>
+      <li style="background: #8fce00;"> <img src="imgs/cara-louco.jpg" alt=""></li>
+      <li style="background: #2986cc;">  <img src="imgs/massa-daora.jpg" alt=""></li>
+      <li style="background: #16537e;"> <img src="imgs/cafezin.jpg" alt=""></li>
+      <li style="background: #6a329f;"> <img src="imgs/bar.jpg" alt=""></li>
+      <li style="background: #c90076;"> <img src="imgs/barzim.jpg" alt=""></li>
+      <li style="background: #b4a7d6;"> <img src="imgs/festina.jpg" alt=""></li>
     </ul>
   </div>
   <div id='div-about'>
@@ -256,7 +254,7 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
   <div class="center">
     <!-- Card 1 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="1">
+      <a href="#" class="mostrar-reserva" data-id="11">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/fundo.jpeg" alt="Fuga">
@@ -267,13 +265,13 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
       <div class="property-description">
         <h5>Fuga Bar - Cais Embarcadero</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>Av. Maua, 1500 - Porto Alegre, RS.</p>
       </div>
     </div>
 
     <!-- Card 2 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="2">
+      <a href="#" class="mostrar-reserva" data-id="12">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/severina.png" alt="Severina">
@@ -284,13 +282,13 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
       <div class="property-description">
         <h5>Severina</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>Rua Campo de São Cristóvão, 4600.</p>
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="3">
+      <a href="#" class="mostrar-reserva" data-id="13">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/wills.png" alt="Wills">
@@ -301,13 +299,13 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
       <div class="property-description">
         <h5>Wills Bar</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>Av. Maua, 1500 - Porto Alegre, RS.</p>
       </div>
     </div>
 
     <!-- Card 4 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="4">
+      <a href="#" class="mostrar-reserva" data-id="14">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/20barra9.png" alt="20/9">
@@ -318,13 +316,13 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
       <div class="property-description">
         <h5>20/9</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>Dinarte Ribeiro, 214 - Porto Alegre, RS </p>
       </div>
     </div>
 
     <!-- Card 5 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="5">
+      <a href="#" class="mostrar-reserva" data-id="15">
         <div class="property-image">
           <div class='card-img'>
             <img class="property-image" src="imgs/canto.png" alt="Canto bar">
@@ -335,24 +333,24 @@ $idCliente = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
       <div class="property-description">
         <h5>Canto Bar</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>R. Álvaro Chaves, 350 - Porto Alegre, RS</p>
       </div>
     </div>
 
     <!-- Card 6 -->
     <div class="property-card">
-      <a href="#" class="mostrar-reserva" data-id="6">
+      <a href="#" class="mostrar-reserva" data-id="16">
         <div class="property-image">
           <div class='card-img'>
-            <img class="property-image" src="imgs/canto.png" alt="Canto bar">
+            <img class="property-image" src="imgs/sirene.jpg" alt="Canto bar">
             <div class="property-image-title"></div>
           </div>
         </div>
       </a>
       <div class="property-description">
-        <h5>Canto Bar</h5>
+        <h5>Sirene</h5>
         <br>
-        <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+        <p>R. José do Patrocínio, 778 - Cidade Baixa, Porto Alegre - RS</p>
       </div>
     </div>
 </div>

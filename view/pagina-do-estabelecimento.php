@@ -38,7 +38,7 @@
       <form id="div-formlogin" method="post" action="../login/loginEst.php">
         <div class="div-label-input">
           <label for="cnpj">
-            <img src="svg/envelope.svg" alt="">
+            <img src="svg/briefcase-fill.svg" alt="">
           </label>
           <input type="text" name="cnpj" id="cnpj-input-login" placeholder="CNPJ" required>
         </div>

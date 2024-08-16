@@ -1,8 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: ../view/pagina-do-estabelecimento.php");
     echo "<script>alert('Faça login!')</script>";
-    header("Location: ../view/index.php");
+
     exit;
 }
 
@@ -48,22 +49,16 @@ $result = $stmt;
 
 <body>
 
-<header>
-    <nav>
-      <img src='imgs/logonobg_laranja.png' alt=''>
-      <ul id="ul_header">
-        <li><a id="logout" href="../login/logoutEst.php">Sair</a></li>
-      </ul>
-    </nav>
-  </header>
 
     <div id="card-table">
         <div id="div-title">
+        <a id="logout" href="../login/logoutEst.php"><img src="svg/box-arrow-left.svg" alt=""></a>
             <h2>Suas reservas: </h2>
-            <form method="GET" action="">
+            <form id="div-sair" method="GET" action="">
                 <label id="label-filtro" for="dataReservaFiltro">Filtrar por dataReserva:</label>
                 <input class="input-filtro" type="date" id="dataReservaFiltro" name="dataReservaFiltro" value="<?php echo htmlspecialchars($dataReservaFiltro); ?>">
                 <input id="button-filtro" class="input-filtro" type="submit" value="Filtrar">
+               
             </form>
         </div>
         
@@ -99,6 +94,7 @@ $result = $stmt;
                     }
                     ?>
                 </tbody>
+                
             </table>
         </div>
     </div>

@@ -115,11 +115,13 @@ li a:hover:not(.active) {
     flex-direction: column;
     justify-content: space-between;
     z-index: 6;
+    padding: 2%;
     border: solid;
-    width: 450px;
+    width: 500px;
     border-radius: 1vh;
     color: white;
     align-items: center;
+    height: 57%    ;
     
 }
 
@@ -146,28 +148,32 @@ li a:hover:not(.active) {
 
 #card_reserva {
     z-index: 6;
-    display: none;
+    display: flex;
+    flex-direction: column;
     width: 800px;
     background-color: white;
     padding: 2.5%;
+    border-radius: 2vh;
 }
 
+#div-form-reserva-title {
+    color: #FF5400;
+    margin-bottom: 25px;
 
-
+}
 
 #cabecalho {
 
     display: flex;
     flex-direction: row;
-    width: 350px;
     justify-content: space-between;
     align-items: center;
-    border: solid;
+    width: 100%;
 }
 
 #div-form-title {
 
-    padding-top: 10%;
+
     padding-left: 10px;
     color: #FF6400;
     font-style: bold;
@@ -181,14 +187,17 @@ li a:hover:not(.active) {
     align-items: center;
 }
 
+#register-form{
+    width: 100%;
+}
+
 #div_formulario {
 
-    text-align: justify;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    height: 420px;
-    width: 330px;
-    margin: 40px;
-    
+    height: 500px;
+    width: 100%;
+    margin: 5%;
 }
 
 #div_botao{
@@ -405,6 +414,7 @@ footer {
     position: relative;
     margin-bottom: 25px;
     overflow: hidden;
+    width: 100%;
 }
 
 label {
